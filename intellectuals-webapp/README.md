@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Issues faced:
 Public Directory Configuration: Make sure that your firebase.json is configured correctly. The public property should be set to the build directory of your React app, like this:
 
-'''
+```
 {
   "hosting": {
     "public": "build",
@@ -90,5 +90,5 @@ Public Directory Configuration: Make sure that your firebase.json is configured 
     ]
   }
 }
-'''
+```
 
