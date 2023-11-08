@@ -10,6 +10,26 @@ import JosephsPage from './josephPage.js';
 import RafasPage from './rafaPage.js';
 import NitinsPage from './nitinPage.js';
 
+/*
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAPA3db2CVAzgww6tlQjQMKBvOyHvXd-yM",
+  authDomain: "intellectuals-webpage.firebaseapp.com",
+  projectId: "intellectuals-webpage",
+  storageBucket: "intellectuals-webpage.appspot.com",
+  messagingSenderId: "1049072823880",
+  appId: "1:1049072823880:web:fb18c4d27aef630e01727d"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+ */
+
 function App() {
   return (
       <Router>
