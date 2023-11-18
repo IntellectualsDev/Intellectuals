@@ -1,46 +1,181 @@
+/* Base styles for the timeline container */
 .timeline-container {
     position: relative;
-    padding: 50px 0;
+    padding-top: 2rem; /* Adjust this value as needed */
+    padding-bottom: 2rem; /* Adjust this value as needed */
 }
 
+/* Styles for the timeline vertical line */
 .timeline-line {
     position: absolute;
-    left: 50%; /* Adjust based on your layout */
+    left: 50%; /* Center the line */
     top: 0;
     bottom: 0;
     width: 2px; /* Width of the timeline */
     background: #E63946; /* Color of the timeline */
 }
 
+/* Styles for each timeline item */
+.timeline-item {
+    display: flex;
+    justify-content: flex-end; /* Align the children to the right */
+    margin-bottom: 50px; /* Space between timeline items */
+}
+
+/* Styles for the timeline icons (circles) */
 .timeline-icon {
+    position: absolute;
+    left: calc(50% - 15px); /* Offset by half the icon's width to align with the line */
+    transform: translateX(-50%);
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background: #E63946; /* Color of the circle */
-    position: absolute;
-    transform: translateX(-50%);
+    background: #E63946;
+    z-index: 2; /* Ensure it's above other elements */
 }
 
-.left .timeline-icon {
-    left: calc(50% - 60px);
+/* Styles for the profile container */
+.profile-container {
+    text-align: left; /* Align the text to the left */
+    padding-right: 2rem; /* Space before the timeline */
+    z-index: 1; /* Below the circle */
+    order: -1; /* Render it before the projects container */
 }
 
-.right .timeline-icon {
-    left: calc(50% + 60px);
+/* Styles for the projects container */
+.projects-container {
+    padding-left: 2rem; /* Space after the timeline */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    z-index: 1; /* Below the circle */
+    max-width: calc(50% - 60px); /* Max width for the container */
 }
 
-.profile-container, .projects-container {
-    width: 40%; /* Adjust based on your layout */
+/* Ensure cards are the same size and scrollable */
+.card {
+    min-width: 18rem; /* Fixed width for all cards */
+    margin-right: 20px; /* Space between cards */
 }
 
-.left .profile-container, .right .projects-container {
-    float: left;
-    text-align: right;
-    margin-left: -50%; /* Adjust based on your layout */
+/* Styles for hiding the scrollbar for aesthetic reasons */
+.projects-container::-webkit-scrollbar {
+    display: none;
 }
 
-.right .profile-container, .left .projects-container {
-    float: right;
-    text-align: left;
-    margin-right: -50%; /* Adjust based on your layout */
+.projects-container {
+    -ms-overflow-style: none; /* For IE and Edge */
+    scrollbar-width: none; /* For Firefox */
 }
+
+/* Styles for the profile image */
+.profile-image {
+    border-radius: 50%; /* Circle image */
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+/*!* Base styles for the timeline container *!*/
+/*.timeline-container {*/
+/*    position: relative;*/
+/*    padding-top: 2rem; !* Adjust this value as needed *!*/
+/*    padding-bottom: 2rem; !* Adjust this value as needed *!*/
+/*}*/
+
+/*!* Styles for the timeline vertical line *!*/
+/*.timeline-line {*/
+/*    position: absolute;*/
+/*    left: 50%; !* Center the line *!*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    width: 2px; !* Width of the timeline *!*/
+/*    background: #E63946; !* Color of the timeline *!*/
+/*}*/
+
+/*!* Styles for each timeline item *!*/
+/*.timeline-item {*/
+/*    display: flex;*/
+/*    justify-content: flex-end; !* Align the children to the right *!*/
+/*    margin-bottom: 50px; !* Space between timeline items *!*/
+/*}*/
+
+/*!* Styles for the timeline icons (circles) *!*/
+/*.timeline-icon {*/
+/*    position: absolute;*/
+/*    left: calc(50% - 15px); !* Offset by half the icon's width to align with the line *!*/
+/*    transform: translateX(-50%);*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    border-radius: 50%;*/
+/*    background: #E63946;*/
+/*    z-index: 2; !* Ensure it's above other elements *!*/
+/*}*/
+
+/*!* Styles for the profile container *!*/
+/*.profile-container {*/
+/*    text-align: left; !* Align the text to the left *!*/
+/*    padding-right: 2rem; !* Space before the timeline *!*/
+/*    z-index: 1; !* Below the circle *!*/
+/*    order: -1; !* Render it before the projects container *!*/
+/*}*/
+
+/*!* Styles for the projects container *!*/
+/*.projects-container {*/
+/*    padding-left: 2rem; !* Space after the timeline *!*/
+/*    display: flex;*/
+/*    flex-wrap: nowrap;*/
+/*    overflow-x: auto;*/
+/*    z-index: 1; !* Below the circle *!*/
+/*    max-width: calc(50% - 60px); !* Max width for the container *!*/
+/*}*/
+
+/*.card {*/
+/*    min-width: 18rem; !* Fixed width for all cards *!*/
+/*    margin-right: 20px; !* Space between cards *!*/
+/*}*/
+
+/*.projects-container::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+
+/*.projects-container {*/
+/*    -ms-overflow-style: none; !* For IE and Edge *!*/
+/*    scrollbar-width: none; !* For Firefox *!*/
+/*}*/
+
+/*.profile-image {*/
+/*    border-radius: 50%; !* Circle image *!*/
+/*    width: 100px; !* Adjust size as needed *!*/
+/*    height: auto;*/
+/*}*/
+
+
+/*!* Ensure cards are the same size and scrollable *!*/
+/*.card-group-scrollable {*/
+/*    display: flex;*/
+/*    flex-wrap: nowrap;*/
+/*    overflow-x: auto;*/
+/*}*/
+
+/*.card-group-scrollable .card {*/
+/*    flex: 0 0 auto;*/
+/*    width: 18rem; !* Fixed width for all cards *!*/
+/*    margin-right: 20px; !* Space between cards *!*/
+/*}*/
+
+/*!* Styles for hiding the scrollbar for aesthetic reasons *!*/
+/*.card-group-scrollable::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
+
+/*.card-group-scrollable {*/
+/*    -ms-overflow-style: none; !* For IE and Edge *!*/
+/*    scrollbar-width: none; !* For Firefox *!*/
+/*}*/
+
+/*!* Styles for the profile image *!*/
+/*.profile-image {*/
+/*    border-radius: 50%; !* Circle image *!*/
+/*    width: 100px; !* Adjust size as needed *!*/
+/*    height: auto;*/
+/*}*/
