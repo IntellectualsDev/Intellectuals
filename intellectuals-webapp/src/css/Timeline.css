@@ -1,0 +1,46 @@
+.timeline-container {
+    position: relative;
+    padding: 50px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%; /* Adjust based on your layout */
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Width of the timeline */
+    background: #E63946; /* Color of the timeline */
+}
+
+.timeline-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #E63946; /* Color of the circle */
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.left .timeline-icon {
+    left: calc(50% - 60px);
+}
+
+.right .timeline-icon {
+    left: calc(50% + 60px);
+}
+
+.profile-container, .projects-container {
+    width: 40%; /* Adjust based on your layout */
+}
+
+.left .profile-container, .right .projects-container {
+    float: left;
+    text-align: right;
+    margin-left: -50%; /* Adjust based on your layout */
+}
+
+.right .profile-container, .left .projects-container {
+    float: right;
+    text-align: left;
+    margin-right: -50%; /* Adjust based on your layout */
+}

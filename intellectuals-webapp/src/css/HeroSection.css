@@ -1,0 +1,61 @@
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    padding: 0 50px;
+    background-color: #000;
+}
+
+.hero-content {
+    width: 50%;
+    margin-right: 200px;
+    font-size: 17px;
+
+}
+.hero-content p{
+    margin-top: 20px;
+    font-family: "Hiragino Maru Gothic ProN";
+    font-weight: 500;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    /*font-family: "Hiragino Maru Gothic ProN";*/
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-weight: 900;
+
+            /*Space Grotesk,sans-serif;*/
+}
+
+.get-started-button {
+    background-color: #E63946; /* Replace with your button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.images-container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-top: 30px;*/
+}
+
+.teamphoto-image, .code-editor-image {
+    max-width: 50%; /* Adjust the size as needed */
+    height: auto;
+    margin: 0 10px;
+    /*margin: 0 10px;*/
+}
+
+.colored-line {
+    color: yellow;
+}

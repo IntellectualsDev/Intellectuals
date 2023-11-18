@@ -1,0 +1,9 @@
+
+/*selector for Navigation Bar dropdown meny items  on mouse hover.
+More Specificity required to override the Bootstrap CSS*/
+.bg-body-tertiary .navbar-nav .navDropDown .dropDownItem:hover {
+    background-color: #E63946; /* Set the background color for hover */
+}
+.bg-body-tertiary .navbar-nav .navDropDown .dropDownItem:focus {
+    background-color: #E63946; /* Set the background color for hover */
+}
