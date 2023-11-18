@@ -7,3 +7,75 @@ More Specificity required to override the Bootstrap CSS*/
 .bg-body-tertiary .navbar-nav .navDropDown .dropDownItem:focus {
     background-color: #E63946; /* Set the background color for hover */
 }
+
+.navbar {
+    background-color: black !important; /* Set background color to black */
+    border-bottom: 10px solid #E63946; /* Highlight color bottom border */
+    padding: 20px 0; /* Increase the height of the navbar */
+}
+
+/* Style for the brand and navigation links */
+.navbar-brand, .navbar-nav .nav-link, .navbar-nav .dropdown-toggle {
+    color: white !important; /* Set text color to white */
+    font-size: 1.43rem; /* Increase font size */
+    padding: 0 20px; /* Increase space between the items */
+    margin-right: 3.0rem;
+}
+
+/* Style for the "Login / Sign Up" button */
+.btn-outline-success {
+    background-color: #E63946 !important; /* Fill button with highlight color */
+    border: none !important; /* Remove border */
+    color: white !important; /* Set text color to white */
+    padding: 8px 20px !important;/* Increase padding for a larger button */
+    font-size: 1.35rem !important; /* Scale up the text inside the button */
+    margin-right: 3rem !important;/* Add space between the button and the right edge */
+    transition: all 0.3s ease-in-out !important;/* Smooth transition for hover effect */
+}
+
+/* Hover effect for the "Login / Sign Up" button */
+.btn-outline-success:hover {
+    background-color: #ff6f61 !important; /* Lighter shade for hover effect */
+    color: black !important; /* Change text color on hover */
+    transform: scale(1.04); /* Slightly increase the size */
+}
+
+/* Ensure the navigation dropdowns have the correct background color */
+.navbar-nav .navDropDown {
+    background-color: black !important; /* Set dropdown background color */
+}
+
+/* Style for the dropdown items on hover and focus */
+.navbar-nav .navDropDown .dropDownItem:hover,
+.navbar-nav .navDropDown .dropDownItem:focus {
+    background-color: #E63946 !important; /* Set the background color for hover */
+    color: white !important;
+}
+
+#navbar {
+    background-color: black !important; /* Set background color to black */
+    border-bottom: 5px solid #E63946; /* Highlight color bottom border */
+    padding: 20px 0; /* Increase vertical padding to make navbar taller */
+}
+
+.dropdown-menu.show {
+    background-color: black !important;
+
+}
+
+.nav-dropdown .dropdown-menu {
+    padding: 5rem 0; /* Add padding inside dropdown menu for more space */
+}
+
+.bg-body-tertiary .navbar-nav .navDropDown .dropDownItem {
+    padding: 0.5rem 0;
+    padding-left: 0.2rem;
+}
+
+#logo-name {
+    font-size: 22px;
+    /*font-family: "Hiragino Maru Gothic ProN";*/
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-weight: 900;
+    margin-right: 50px;
+}

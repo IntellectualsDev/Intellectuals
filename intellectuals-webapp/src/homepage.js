@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -11,9 +10,9 @@ import './css/GlobalNav.css';
 
 function GlobalNav() {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
+        <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
-                <Navbar.Brand href="#">INTELLECTUALS</Navbar.Brand>
+                <Navbar.Brand id = "logo-name" href="#">INTELLECTUALS</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -70,11 +69,11 @@ const HeroSection = () => {
                 <div className="hero-content">
                     <h1>Top Tier Team in the Field of Electrical and Computer Engineering</h1>
                     <p>Bring your idea to live with a professional team of engineers. We have what it takes to make your dreams a reality!</p>
-                    <button className="get-started-button">Get Started</button>
+                    <Button variant="outline-success">Get Started</Button>
                 </div>
                 <div className="images-container">
-                    <img src="../public/intellectuals_homepage.jpg" alt="The Development Team" className="teamphoto-image" />
-                    <img src="../public/logo512.png" alt="Code Editor" className="code-editor-image" />
+                    <img src="/intellectuals_homepage.jpg" alt="The Development Team" className="teamphoto-image" />
+                    <img src="/logo512.png" alt="Code Editor" className="code-editor-image" />
                 </div>
             </div>
             <hr
@@ -86,9 +85,6 @@ const HeroSection = () => {
                 }}
             />
         </div>
-
-
-
     );
 };
 

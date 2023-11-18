@@ -27,7 +27,7 @@
     font-family: "Hiragino Kaku Gothic Pro";
     font-weight: 900;
 
-            /*Space Grotesk,sans-serif;*/
+    /*Space Grotesk,sans-serif;*/
 }
 
 .get-started-button {
@@ -49,11 +49,17 @@
     /*margin-top: 30px;*/
 }
 
-.teamphoto-image, .code-editor-image {
+.teamphoto-image {
+    max-width: 110%; /* Adjust the size as needed */
+    height: auto;
+    margin: 0 1px;
+    /*margin: 0 10px;*/
+}
+
+.code-editor-image {
     max-width: 50%; /* Adjust the size as needed */
     height: auto;
     margin: 0 10px;
-    /*margin: 0 10px;*/
 }
 
 .colored-line {
