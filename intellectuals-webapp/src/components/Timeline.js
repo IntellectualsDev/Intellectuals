@@ -10,10 +10,13 @@ const Timeline = ({ teamMembers }) => {
             {teamMembers.map((member) => (
                 <div key={member.id} className="timeline-item">
                     <div className="profile-container">
-                        <img src={member.image} alt={member.name} className="profile-image" />
-                        <div className="profile-text">
+                        <div className='profile-image-container'>
+                            <img src={member.image} alt={member.name} className="profile-image" />
+                        </div>
+                        <div className="profile-text-container">
                             <h3>{member.name}</h3>
-                            <p>{member.role}</p>
+                            <span className="badge badge-secondary">{member.role}</span>
+                            {/*<p>{member.role}</p>*/}
                         </div>
                     </div>
                     <div className="timeline-icon"></div> {/* Circle icon on the timeline */}
@@ -22,7 +25,7 @@ const Timeline = ({ teamMembers }) => {
                             <Card className='project-card rounded border-danger' key={project.id} bg='dark'>
                                 <Card.Img variant="top" src={project.image} />
                                 <Card.Body>
-                                    <Card.Title>{project.title}</Card.Title>
+                                    <Card.Title className='card-title'>{project.title}</Card.Title>
                                     <Card.Text>{project.description}</Card.Text>
                                     <Card.Link href="#">View</Card.Link>
                                 </Card.Body>
