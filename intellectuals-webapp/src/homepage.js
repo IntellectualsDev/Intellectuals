@@ -78,10 +78,11 @@ const HeroSection = () => {
             </div>
             <hr
                 style={{
-                    background: 'lime',
-                    color: 'lime',
-                    borderColor: 'lime',
-                    height: '3px',
+                    background: '#E63946',
+                    color: '#E63946',
+                    borderColor: '#E63946',
+                    height: '10px',
+
                 }}
             />
         </div>

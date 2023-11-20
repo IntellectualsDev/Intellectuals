@@ -16,7 +16,7 @@ const Timeline = ({ teamMembers }) => {
                     <div className="timeline-icon"></div>
                     <div className={`projects-container card-group-scrollable`}>
                         {member.projects.map(project => (
-                            <Card key={project.id} style={{ minWidth: '18rem' }}>
+                            <Card className = 'project-card rounded border-danger' key={project.id} style={{ minWidth: '18rem' }} bg='dark'>
                                 <Card.Img variant="top" src={project.image} />
                                 <Card.Body>
                                     <Card.Title>{project.title}</Card.Title>

@@ -103,6 +103,12 @@ const teamMembers = [
                 description: "Avidly plays DND instead of hanging out with his friends :/ TODO",
                 image: "/logo192.png", // Replace with actual path
             },
+            {
+                id: 'NA',
+                title: "View All",
+                description: "",
+                image: "/logo192.png", // Replace with actual path
+            },
         ],
     },
     // ... more team members
