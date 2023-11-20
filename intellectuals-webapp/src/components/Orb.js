@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { MeshWobbleMaterial } from "@react-three/drei";
 
-const Orb = ({ color, factor }) => {
+const Orb = ({ color, factor, ambientColor }) => {
     const meshRef = useRef();
 
     useFrame(() => {
@@ -14,7 +14,7 @@ const Orb = ({ color, factor }) => {
     return (
         <mesh ref={meshRef} position={[0, 0, 3]}>
             {/* Lights setup */}
-            <ambientLight intensity={0} color={"0x404040"} />
+            <ambientLight intensity={0} color={ambientColor} />
             <pointLight intensity={1} position={[1, 5, 3]} />
             <pointLight intensity={1} position={[2, 0, -5]} />
             <pointLight intensity={2} position={[3, 7, -7]} />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Canvas } from "react-three-fiber";
 import Orb from './components/Orb'
+import OrbitingOrb from "./components/OrbitingOrb";
 
 import './css/HeroSection.css';
 import './css/GlobalNav.css';
@@ -65,6 +66,8 @@ function GlobalNav() {
 export { GlobalNav} ;
 
 const HeroSection = () => {
+    const [isOrbitingOrbFront, setIsOrbitingOrbFront] = useState(false);
+
     return (
         <div>
             <div className="hero-container">
@@ -74,25 +77,39 @@ const HeroSection = () => {
                     <Button variant="outline-success">Get Started</Button>
                 </div>
                 <div className="images-container">
-                    <div id = "orb-canvas" style={{ height: '500px', width: '500px' }}>
-                        <Canvas>
-                            <Orb color="#fff702" factor={10} />
-                            {/* You can add more components or lights if needed */}
+                    {/*<div className="image-container">*/}
+                        {/*<Canvas className="orb-canvas" style={{ width: '100%', height: '100%', }}>*/}
+                        {/*<Canvas className="orb-canvas" style={{ width: '70%', height: '70%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>*/}
+                        {/*    <Orb color="#fff702" factor={10} ambientColor='0x404040'/>*/}
+                        {/*</Canvas>*/}
+                        <Canvas id = 'big-orb-canvas' className="orb-canvas" style={{ width: '70%', height: '70%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>
+                            <Orb color="#FFFD82" factor={3} ambientColor='#FFFD82'/>
                         </Canvas>
-                    </div>
-                    {/*<img src="/intellectuals_homepage.jpg" alt="The Development Team" className="teamphoto-image" />*/}
-                    {/*<img src="/logo512.png" alt="Code Editor" className="code-editor-image" />*/}
+                        {/* Orb 2 - Medium and placed in the center */}
+                        <Canvas id = 'medium-orb-canvas' className="orb-canvas" style={{ width: '45%', height: '45%', top: '8%', left: '10%', transform: 'translate(20%, -20%)' }}>
+                            <Orb color="#61E786" factor={10} ambientColor='#61E786' />
+                        </Canvas>
+                        {/*/!* Orb 3 - Smallest and placed top left *!/*/}
+                        <Canvas id = 'small-orb-canvas' className="orb-canvas" style={{ width: '25%', height: '25%', top: '38%', left: '-40%', transform: 'translate(20%, -30%)'}}>
+                            <Orb color="#ED217C" factor={30} ambientColor='#ED217C'/>
+                        </Canvas>
+                    {/*</div>*/}
+
+
+
+                    {/*<div className="canvas-container" style={{ height: '500px', width: '500px' }}>*/}
+                    {/*    <Canvas className="orb-canvas">*/}
+                    {/*        <Orb color="#fff702" factor={10} />*/}
+                    {/*    </Canvas>*/}
+                    {/*</div>*/}
                 </div>
             </div>
-            <hr
-                style={{
-                    background: '#E63946',
-                    color: '#E63946',
-                    borderColor: '#E63946',
-                    height: '10px',
-
-                }}
-            />
+            <hr style={{
+                background: '#E63946',
+                color: '#E63946',
+                borderColor: '#E63946',
+                height: '10px',
+            }}/>
         </div>
     );
 };
@@ -109,4 +126,4 @@ const ColoredLine = ({ color }) => (
     />
 );
 
-export {ColoredLine}
+export { ColoredLine };
