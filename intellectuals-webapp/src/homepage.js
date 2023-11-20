@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Canvas } from "react-three-fiber";
+import Orb from './components/Orb'
 
 import './css/HeroSection.css';
 import './css/GlobalNav.css';
@@ -72,8 +74,14 @@ const HeroSection = () => {
                     <Button variant="outline-success">Get Started</Button>
                 </div>
                 <div className="images-container">
-                    <img src="/intellectuals_homepage.jpg" alt="The Development Team" className="teamphoto-image" />
-                    <img src="/logo512.png" alt="Code Editor" className="code-editor-image" />
+                    <div id = "orb-canvas" style={{ height: '500px', width: '500px' }}>
+                        <Canvas>
+                            <Orb color="#fff702" factor={10} />
+                            {/* You can add more components or lights if needed */}
+                        </Canvas>
+                    </div>
+                    {/*<img src="/intellectuals_homepage.jpg" alt="The Development Team" className="teamphoto-image" />*/}
+                    {/*<img src="/logo512.png" alt="Code Editor" className="code-editor-image" />*/}
                 </div>
             </div>
             <hr

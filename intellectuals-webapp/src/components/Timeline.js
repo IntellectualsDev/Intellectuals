@@ -14,7 +14,8 @@ const Timeline = ({ teamMembers }) => {
                             <img src={member.image} alt={member.name} className="profile-image" />
                         </div>
                         <div className="profile-text-container">
-                            <h3>{member.name}</h3>
+                            <h3 id='team-name-header'>{member.name}</h3>
+
                             <span className="badge badge-secondary">{member.role}</span>
                             {/*<p>{member.role}</p>*/}
                         </div>
