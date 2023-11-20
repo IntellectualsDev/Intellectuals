@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# Demo View
+### Three.js Hero Section
+<img width="1440" alt="Screen Shot 2023-11-21 at 12 56 29 AM" src="https://github.com/anshuljg07/Intellectuals/assets/72891464/9b76147b-4a26-4b69-9d6a-0a6fbc0c9378">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Dynamic Profile Section
+<img width="1440" alt="Screen Shot 2023-11-21 at 12 57 17 AM" src="https://github.com/anshuljg07/Intellectuals/assets/72891464/f95f1c6c-b946-4ec1-8820-6375ad7ba232">
+
+
+# Getting Started with Create React App
 
 ## Available Scripts
 
@@ -68,9 +74,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# Demo
-<img width="1440" alt="Screen Shot 2023-11-20 at 5 14 00 PM" src="https://github.com/anshuljg07/Intellectuals/assets/72891464/4652c545-63f1-4e3d-a755-60212bd39461">
-<img width="1440" alt="Screen Shot 2023-11-20 at 5 14 15 PM" src="https://github.com/anshuljg07/Intellectuals/assets/72891464/eb2bd1ce-190a-43ce-a55e-3cf6a468d3c1">
 
 
