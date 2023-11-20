@@ -56,7 +56,7 @@ const teamMembers = [
     {
         id: 3,
         name: "Nitin Nagarkar",
-        role: "Mechanical Engineering, Electrical Engineering BSE",
+        role: "Mechanical Engineering, Electrical Engineering, BSE jfalsdjflasjdfalsdjfalsdjfal;sd jfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sdjfalsdjflasjdfalsdjfalsdjfal;sd",
         image: "/display-pic.png", // Replace with actual path
         projects: [
             {
