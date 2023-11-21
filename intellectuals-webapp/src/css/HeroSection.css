@@ -94,8 +94,10 @@
     margin: 0 10px;
 }
 
-.colored-line {
-    color: yellow;
+
+#horizontal-divider {
+    height: 20px !important;
+    visibility: hidden;
 }
 
 .orb-canvas {

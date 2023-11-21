@@ -82,7 +82,7 @@ const HeroSection = () => {
                         {/*<Canvas className="orb-canvas" style={{ width: '70%', height: '70%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>*/}
                         {/*    <Orb color="#fff702" factor={10} ambientColor='0x404040'/>*/}
                         {/*</Canvas>*/}
-                        <Canvas id = 'big-orb-canvas' className="orb-canvas" style={{ width: '70%', height: '70%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>
+                        <Canvas id = 'big-orb-canvas' className="orb-canvas" style={{ width: '62%', height: '62%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>
                             <Orb color="#FFFD82" factor={3} ambientColor='#FFFD82'/>
                         </Canvas>
                         {/* Orb 2 - Medium and placed in the center */}
@@ -118,12 +118,15 @@ export { HeroSection };
 
 const ColoredLine = ({ color }) => (
     <hr
+        id='horizontal-divider'
         style={{
             color: color,
             backgroundColor: color,
-            height: 5
+            height: 5,
+            opacity: 1,
         }}
     />
+
 );
 
 export { ColoredLine };

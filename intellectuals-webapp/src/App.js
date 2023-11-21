@@ -19,7 +19,7 @@ import NitinsPage from './nitinPage.js';
 function App() {
   return (
       <Router>
-        <div>
+        <div style={{backgroundColor: "#000000"}}>
           <GlobalNav />
           <HeroSection />
           <Timeline teamMembers={teamMembers}/>
