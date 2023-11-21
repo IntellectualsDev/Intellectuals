@@ -1,0 +1,104 @@
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    color: #fff;
+    padding: 0 50px;
+    background-color: #000;
+}
+
+.hero-content {
+    width: 50%;
+    margin-right: 200px;
+    font-size: 17px;
+
+}
+.hero-content p{
+    width: 120%;
+    margin-top: 20px;
+    font-family: "Hiragino Maru Gothic ProN";
+    font-weight: 500;
+}
+
+.hero-content h1 {
+    width: 150%;
+    font-size: 55px;
+    /*font-family: "Hiragino Maru Gothic ProN";*/
+    font-family: "Hiragino Kaku Gothic Pro";
+    font-weight: 900;
+
+    /*Space Grotesk,sans-serif;*/
+}
+
+.get-started-button {
+    background-color: #E63946; /* Replace with your button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.images-container {
+    position: relative; /* This will be the reference for the orbs' absolute positioning */
+    width: 50%; /* Set to the full width of its parent container */
+    height: 100%; /* Set to the full height of its parent container */
+    display: flex; /* Using flex to center content if needed */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/*.images-container {*/
+/*    !*width: 30%;*!*/
+/*    !*display: flex;*!*/
+/*    !*align-items: center;*!*/
+/*    !*justify-content: center;*!*/
+/*    display: flex;*/
+/*    flex-grow: 1;*/
+/*    height: 100%;*/
+/*}*/
+
+.orb-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.small-section {
+    flex: 1 !important; /* Smaller section */
+}
+
+.medium-section {
+    flex: 2 !important; /* Medium section */
+}
+
+.large-section {
+    flex: 3 !important; /* Largest section */
+}
+
+.teamphoto-image {
+    max-width: 110%; /* Adjust the size as needed */
+    height: auto;
+    margin: 0 1px;
+    /*margin: 0 10px;*/
+}
+
+.code-editor-image {
+    max-width: 50%; /* Adjust the size as needed */
+    height: auto;
+    margin: 0 10px;
+}
+
+.colored-line {
+    color: yellow;
+}
+
+.orb-canvas {
+    position: absolute;
+
+}
