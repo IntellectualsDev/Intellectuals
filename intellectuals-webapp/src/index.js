@@ -5,8 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+/*
+import { initializeApp } from 'firebase/app';
+const firebaseConfig = {
+    apiKey: "AIzaSyAPA3db2CVAzgww6tlQjQMKBvOyHvXd-yM",
+    authDomain: "intellectuals-webpage.firebaseapp.com",
+    projectId: "intellectuals-webpage",
+    storageBucket: "intellectuals-webpage.appspot.com",
+    messagingSenderId: "1049072823880",
+    appId: "1:1049072823880:web:fb18c4d27aef630e01727d"
+};
 
-
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+*/
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
