@@ -10,10 +10,10 @@ import { GlobalNav, HeroSection } from './homepage';
 import Timeline from './components/Timeline';
 import teamMembers from "./data/data";
 
-import AnshulsPage from './anshulPage.js';
-import JosephsPage from './josephPage.js';
-import RafasPage from './rafaPage.js';
-import NitinsPage from './nitinPage.js';
+import AnshulsPage from './pages/anshulPage';
+import JosephsPage from './pages/josephPage.js';
+import RafasPage from './pages/rafaPage.js';
+import NitinsPage from './pages/nitinPage.js';
 
 /*
 // Import the functions you need from the SDKs you need
