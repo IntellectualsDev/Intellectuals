@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from 'react-bootstrap';
 import '../css/Timeline.css';
+import "bootstrap-icons/font/bootstrap-icons.css"; // Bootstrap Icons
 
 // Variants for the profile image and text
 const profileImageVariants = {
@@ -42,6 +43,18 @@ const timelineItemVariants = {
     }
 };
 
+const timelineIconVariants = {
+    minimized: {
+        scale: 1,
+        transition: {duration: 0.2}
+
+    },
+    maximized: {
+        scale: 2,
+        transition: {duration: 0.2}
+    }
+}
+
 const TimelineItem = React.forwardRef(({ member, isMinimized }, ref) => (
     <div className="timeline-item" ref={ref}>
         <div className="profile-container">
@@ -61,7 +74,15 @@ const TimelineItem = React.forwardRef(({ member, isMinimized }, ref) => (
                 <span className="badge badge-secondary">{member.role}</span>
             </motion.div>
         </div>
-        <div className="timeline-icon"></div> {/* Circle icon on the timeline */}
+
+        <motion.div
+            className="timeline-icon"
+            variants={timelineIconVariants}
+            animate={isMinimized ? "minimized" : "maximized"}
+        ></motion.div>
+
+        {/*<div className="timeline-icon"></div> /!* Circle icon on the timeline *!/*/}
+
         <motion.div
             className="projects-container"
             variants={timelineItemVariants}

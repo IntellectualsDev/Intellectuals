@@ -1,33 +1,6 @@
 const teamMembers = [
     {
         id: 1,
-        name: "Rafael Rangel de la Tejera",
-        role: "Electrical Engineering, BSE",
-        image: "/display-pic.png", // Replace with actual path
-        projects: [
-            {
-                id: 'p1',
-                title: "WiFi Thermometer",
-                description: "Embedded systems project that consists of a thermometer that connects to a website... TODO",
-                image: "/logo192.png", // Replace with actual path
-            },
-            {
-                id: 'p2',
-                title: "Influencer App",
-                description: "Created a influencer gig networking app... TODO",
-                image: "/logo192.png", // Replace with actual path
-            },
-            {
-                id: 'p3',
-                title: "Caseys Frontend Web App",
-                description: "Flutter App for Casey's front of house TODO",
-                image: "/logo192.png", // Replace with actual path
-            },
-        ],
-    },
-
-    {
-        id: 2,
         name: "Anshul Gowda",
         role: "Electrical Engineering, BSE & Pre-Medicine",
         image: "/display-pic.png", // Replace with actual path
@@ -48,6 +21,33 @@ const teamMembers = [
                 id: 'p3',
                 title: "Delirium Identification Training Publication Lee Lab",
                 description: "Conducted a systematic review of delirium identification and training under the mentorship of Dr. Sangil Lee MD",
+                image: "/logo192.png", // Replace with actual path
+            },
+        ],
+    },
+
+    {
+        id: 2,
+        name: "Rafael Rangel de la Tejera",
+        role: "Electrical Engineering, BSE",
+        image: "/display-pic.png", // Replace with actual path
+        projects: [
+            {
+                id: 'p1',
+                title: "WiFi Thermometer",
+                description: "Embedded systems project that consists of a thermometer that connects to a website... TODO",
+                image: "/logo192.png", // Replace with actual path
+            },
+            {
+                id: 'p2',
+                title: "Influencer App",
+                description: "Created a influencer gig networking app... TODO",
+                image: "/logo192.png", // Replace with actual path
+            },
+            {
+                id: 'p3',
+                title: "Caseys Frontend Web App",
+                description: "Flutter App for Casey's front of house TODO",
                 image: "/logo192.png", // Replace with actual path
             },
         ],
