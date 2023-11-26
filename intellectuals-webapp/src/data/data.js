@@ -23,6 +23,12 @@ const teamMembers = [
                 description: "Conducted a systematic review of delirium identification and training under the mentorship of Dr. Sangil Lee MD",
                 image: "/logo192.png", // Replace with actual path
             },
+            {
+                id: 'p4',
+                title: "Intellecuals Web app FrontEnd",
+                description: "Designed and implemented the Intellectuals webapp frontend",
+                image: "/logo192.png", // Replace with actual path
+            },
         ],
     },
 
@@ -53,32 +59,60 @@ const teamMembers = [
         ],
     },
 
+    // {
+    //     id: 3,
+    //     name: "Nitin Nagarkar",
+    //     role: "Mechanical Engineering, Electrical Engineering, BSE",
+    //     image: "/display-pic.png", // Replace with actual path
+    //     projects: [
+    //         {
+    //             id: 'p1',
+    //             title: "WiFi Thermometer",
+    //             description: "Embedded systems project that consists of a thermometer that connects to a website... TODO",
+    //             image: "/logo192.png", // Replace with actual path
+    //         },
+    //         {
+    //             id: 'p2',
+    //             title: "Robotics Research UIUC",
+    //             description: "Research stuff, robotics, UIUC... TODO",
+    //             image: "/logo192.png", // Replace with actual path
+    //         },
+    //         {
+    //             id: 'p3',
+    //             title: "Other Mechanical stuff",
+    //             description: "Other stuff... TODO",
+    //             image: "/logo192.png", // Replace with actual path
+    //         },
+    //     ],
+    // },
+
     {
         id: 3,
-        name: "Nitin Nagarkar",
-        role: "Mechanical Engineering, Electrical Engineering, BSE",
+        name: "Eli Paulsen",
+        role: "Computer Science Engineering, BSE",
         image: "/display-pic.png", // Replace with actual path
         projects: [
             {
                 id: 'p1',
-                title: "WiFi Thermometer",
-                description: "Embedded systems project that consists of a thermometer that connects to a website... TODO",
+                title: "Collins Aerospace Embedded Engineer",
+                description: "Embedded systems project that consists DOD related infrastructure solutions... TODO",
                 image: "/logo192.png", // Replace with actual path
             },
             {
                 id: 'p2',
-                title: "Robotics Research UIUC",
-                description: "Research stuff, robotics, UIUC... TODO",
+                title: "UIowa IT Developer",
+                description: "Institutional Web Development at Scale, focused on UIX and backend technologies... TODO",
                 image: "/logo192.png", // Replace with actual path
             },
             {
                 id: 'p3',
-                title: "Other Mechanical stuff",
-                description: "Other stuff... TODO",
+                title: "Chess Clock",
+                description: "Hardware/software project fit to chess professional specs TODO ",
                 image: "/logo192.png", // Replace with actual path
             },
         ],
     },
+
     {
         id: 4,
         name: "Joseph Bartoszczyk",
