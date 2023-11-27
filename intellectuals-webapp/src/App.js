@@ -14,7 +14,7 @@ import AnshulsPage from './pages/anshulPage';
 import JosephsPage from './pages/josephPage.js';
 import RafasPage from './pages/rafaPage.js';
 import NitinsPage from './pages/nitinPage.js';
-
+import LoginPage from "./pages/loginPage";
 import Home from './Home'
 
 /*
@@ -50,6 +50,7 @@ function App() {
             <Route path="/joseph" element={<JosephsPage />} />
             <Route path="/rafa" element={<RafasPage />} />
             <Route path="/nitin" element={<NitinsPage />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="/" element={<h1>Home Page</h1>} />
           </Routes>
         </div>

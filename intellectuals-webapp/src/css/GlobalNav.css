@@ -29,8 +29,12 @@ More Specificity required to override the Bootstrap CSS*/
     color: white !important; /* Set text color to white */
     padding: 8px 20px !important;/* Increase padding for a larger button */
     font-size: 1.35rem !important; /* Scale up the text inside the button */
-    margin-right: 3rem !important;/* Add space between the button and the right edge */
+    /*margin-right: 3rem !important;!* Add space between the button and the right edge *!*/
     transition: all 0.3s ease-in-out !important;/* Smooth transition for hover effect */
+}
+
+.custom-button {
+    margin-right: 3rem;
 }
 
 /* Hover effect for the "Login / Sign Up" button */

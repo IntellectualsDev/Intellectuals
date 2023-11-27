@@ -10,12 +10,15 @@ import OrbitingOrb from "./components/OrbitingOrb";
 
 import './css/HeroSection.css';
 import './css/GlobalNav.css';
+import {Link} from "react-router-dom";
 
 function GlobalNav() {
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
-                <Navbar.Brand id = "logo-name" href="#">INTELLECTUALS</Navbar.Brand>
+                <Link to="/">
+                    <Navbar.Brand id = "logo-name" href="#">INTELLECTUALS</Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -57,7 +60,10 @@ function GlobalNav() {
                             Contact
                         </Nav.Link>
                     </Nav>
-                    <Button variant="outline-success">Login / Sign Up</Button>
+                    <Link to="/login">
+                        <Button variant="outline-success" className="custom-button" >
+                            Login / Sign Up</Button>
+                    </Link>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

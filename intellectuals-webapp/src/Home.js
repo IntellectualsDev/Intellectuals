@@ -17,7 +17,7 @@ import teamMembers from "./data/data";
 
 function Home() {
     return (
-        <div>
+        <div >
             <GlobalNav />
             <HeroSection />
             <Timeline teamMembers={teamMembers}/>
