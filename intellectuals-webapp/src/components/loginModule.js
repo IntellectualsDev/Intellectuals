@@ -1,5 +1,5 @@
 import '../css/LoginModule.css';
-import { Container, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Form, FormControl, Button,FormText } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import { auth } from '../database/firebase';
 import{ createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth"
@@ -16,6 +16,8 @@ function LoginModule() {
     //todo check if user is signed it
     //todo implement logic for when user is signed in DOING
     //todo login from a created account
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const navigate = useNavigate();
     const handleAuth = async () => {
@@ -140,18 +142,20 @@ function LoginModule() {
                         }),
                     }}
                 />
+
                 {showErrorEmail && <div className={"error-message"} style={{ alignSelf: 'flex-start', flexWrap: 'wrap' }} >{errorEmailMessage}</div>}
 
             </Form>
             <Form onSubmit={handleFormSubmit}>
                 <Form.Label id="passwordLabel" className="textbox-title">Enter password</Form.Label>
                 <div className="password-container">
-                <FormControl
-                    type="text"
+                <Form.Control
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="Password"
                     value={password}
                     onChange={handlePasswordChange}
-
+                    onMouseEnter={() => setShowPassword(true)}
+                    onMouseLeave={() => setShowPassword(false)}
                     style={{
                         width: `${maxLabelWidth}px`,
                         marginBottom: showErrorPassword ? '5px' : '40px',
