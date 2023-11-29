@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.projects-page {
+    //font-family: 'Arial', sans-serif;
+    scroll-behavior: auto !important;
+    color: #fff;
+}
+
+.projects-hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh; // Adjust the height to take up 3/4 of the page
+    //background: url("Users/anshulgowda/Documents/CODE/Intellectuals/intellectuals-webapp/public/jigsaw.jpeg") no-repeat center center; // Adjust with your image path
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-hero-section::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.45); // This adds a dark overlay
+    //background: #ff006e;
+    //opacity: 85%;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.project-hero-content {
+    display: grid;
+    position: relative;
+    z-index: 2;
+    max-width: 900px; // Adjust the width as needed
+    margin: 0 auto;
+    padding: 50px;
+    justify-content: left;
+    //align-content: flex-Istart;
+}
+
+.projects-hero-section h1 {
+    //font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5.4rem; // Large font size for the main headline
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+}
+
+.projects-hero-section .lead {
+    font-size: 1.5rem; // Smaller font size for the subheadline
+    font-weight: 300; // Lighter font weight for the subheadline
+}
+
+// Responsive breakpoints if needed
+@media (max-width: 768px) {
+    .projects-hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects-hero-section .lead {
+        font-size: 1.2rem;
+    }
+}
