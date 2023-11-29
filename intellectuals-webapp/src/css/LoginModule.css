@@ -1,26 +1,26 @@
 .heading {
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;  /* Use Roboto font */
-    font-weight: bold;  /* Make it bold */
-    font-size: 60px;    /* Set the font size to 60 pixels */
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .textbox-title {
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;  /* Use Roboto font */
-    font-weight: 600;  /* Make it bold */
-    font-size: 14px;    /* Set the font size to 60 pixels */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
     text-align: start;
     word-wrap: break-word;
 }
 
 .body {
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;  /* Use Roboto font */
-    font-weight: normal;  /* Make it bold */
-    font-size: 20px;    /* Set the font size to 60 pixels */
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
     text-align: center;
     word-wrap: break-word;
     margin-bottom: 40px;
@@ -28,9 +28,9 @@
 
 .error-message{
     color: #ff3333;
-    font-family: 'Roboto', sans-serif;  /* Use Roboto font */
-    font-weight: normal;  /* Make it bold */
-    font-size: 14px;    /* Set the font size to 60 pixels */
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
     /*text-align: start;*/
     align-self: flex-start;
     word-wrap: break-word;
@@ -38,11 +38,16 @@
 }
 
 .error-message-container {
-    margin-top: 5px; /* Adjust as needed */
-    text-align: left; /* Set text alignment as needed */
+    margin-top: 5px;
+    text-align: left;
     max-width: 400px;
 }
 
 .password-container {
     display: flex;
+}
+
+.whiteOutlineButton {
+    border-color: white;
+    color: white;
 }

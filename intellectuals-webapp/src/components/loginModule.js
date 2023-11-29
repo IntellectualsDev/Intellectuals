@@ -1,9 +1,10 @@
 import '../css/LoginModule.css';
-import { Container, Form, FormControl, Button,FormText } from 'react-bootstrap';
+import { Container, Form, FormControl, Button,InputGroup } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
 import { auth } from '../database/firebase';
 import{ createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth"
 import { useNavigate } from 'react-router-dom';
+import { BsEye, BsEyeSlash } from 'react-icons/bs';
 
 
 
@@ -11,13 +12,11 @@ import { useNavigate } from 'react-router-dom';
 
 function LoginModule() {
 
-    //todo invalid email
-    //todo invalid password type ( at least 6 characters)
-    //todo check if user is signed it
-    //todo implement logic for when user is signed in DOING
-    //todo login from a created account
-
     const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
     const navigate = useNavigate();
     const handleAuth = async () => {
@@ -149,22 +148,32 @@ function LoginModule() {
             <Form onSubmit={handleFormSubmit}>
                 <Form.Label id="passwordLabel" className="textbox-title">Enter password</Form.Label>
                 <div className="password-container">
-                <Form.Control
-                    type={showPassword ? 'text' : 'password'}
-                    placeholder="Password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                    onMouseEnter={() => setShowPassword(true)}
-                    onMouseLeave={() => setShowPassword(false)}
-                    style={{
-                        width: `${maxLabelWidth}px`,
-                        marginBottom: showErrorPassword ? '5px' : '40px',
-                        ...(showErrorPassword && {
-                            outline: '2px solid #ff3333',
-                            boxShadow: '0 0 10px rgba(251, 37, 118, 0.5)',
-                        }),
-                    }}
-                />
+                <InputGroup style={{
+                    width: `${maxLabelWidth}px`,
+                    marginBottom: showErrorPassword ? '5px' : '40px',
+                    ...(showErrorPassword && {
+                        outline: '2px solid #ff3333',
+                        boxShadow: '0 0 10px rgba(251, 37, 118, 0.5)',
+                    }),
+                }}>
+                    <Form.Control
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder="Password"
+                        value={password}
+                        onChange={handlePasswordChange}
+
+
+                    />
+
+                    <Button
+                        variant="outline-secondary"
+                        onClick={togglePasswordVisibility}
+                        className="whiteOutlineButton"
+                    >
+                        {showPassword ? <BsEyeSlash /> : <BsEye />}
+                    </Button>
+
+                </InputGroup>
                 </div>
                 {showErrorPassword && (
                     <div className="error-message-container">
