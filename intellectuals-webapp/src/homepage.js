@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Canvas } from "react-three-fiber";
 import Orb from './components/Orb'
+import { onAuthStateChanged } from 'firebase/auth';
 import OrbitingOrb from "./components/OrbitingOrb";
 
 import './css/HeroSection.css';
@@ -14,6 +15,7 @@ import {Link} from "react-router-dom";
 
 //todo
 import { auth } from './database/firebase';
+import {browserSessionPersistence, setPersistence} from "firebase/auth";
 
 //todo
 
@@ -24,6 +26,9 @@ function GlobalNav() {
     const [signedIn, setSignedIn] = useState(false);
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const [loading, setLoading] = useState(true);
+
+
 
     useEffect(() => {
 
@@ -37,20 +42,14 @@ function GlobalNav() {
         // Attach the event listener when the component mounts
         document.addEventListener('mousedown', handleClickOutside);
 
-        const stateChanged = auth.onAuthStateChanged((user) => {//todo
-            if (user) {
-                // User is signed in
-                setUser(user);
-                setSignedIn(true);
-            } else {
-                // No user is signed in
-                setUser(null);
-                setSignedIn(false);
-            }
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setUser(user);
+            setLoading(false);
         });
         // Detach the event listener when the component unmounts
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
+            unsubscribe();
         };
 
 
@@ -73,6 +72,9 @@ function GlobalNav() {
         setDropdownOpen(!isDropdownOpen);
     };
 
+    if (loading) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
@@ -121,7 +123,7 @@ function GlobalNav() {
                             Contact
                         </Nav.Link>
                     </Nav>
-                    {signedIn ? (
+                    {user ? (
                         <div className="user-dropdown" ref={dropdownRef}>
                             <div className="user-circle" onClick={toggleDropdown}>
                                 {user && user.email[0]}
@@ -214,4 +216,4 @@ const ColoredLine = ({ color }) => (
 
 );
 
-export { ColoredLine };
+export { ColoredLine, auth};
