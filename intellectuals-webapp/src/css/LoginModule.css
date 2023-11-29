@@ -31,7 +31,18 @@
     font-family: 'Roboto', sans-serif;  /* Use Roboto font */
     font-weight: normal;  /* Make it bold */
     font-size: 14px;    /* Set the font size to 60 pixels */
-    text-align: start;
+    /*text-align: start;*/
+    align-self: flex-start;
     word-wrap: break-word;
     margin-bottom: 20px;
+}
+
+.error-message-container {
+    margin-top: 5px; /* Adjust as needed */
+    text-align: left; /* Set text alignment as needed */
+    max-width: 400px;
+}
+
+.password-container {
+    display: flex;
 }

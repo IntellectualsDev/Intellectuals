@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -12,7 +12,68 @@ import './css/HeroSection.css';
 import './css/GlobalNav.css';
 import {Link} from "react-router-dom";
 
+//todo
+import { auth } from './database/firebase';
+
+//todo
+
+
 function GlobalNav() {
+
+    const [user, setUser] = useState(null);
+    const [signedIn, setSignedIn] = useState(false);
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                // Clicked outside the dropdown, close it
+                setDropdownOpen(false);
+            }
+        };
+
+        // Attach the event listener when the component mounts
+        document.addEventListener('mousedown', handleClickOutside);
+
+        const stateChanged = auth.onAuthStateChanged((user) => {//todo
+            if (user) {
+                // User is signed in
+                setUser(user);
+                setSignedIn(true);
+            } else {
+                // No user is signed in
+                setUser(null);
+                setSignedIn(false);
+            }
+        });
+        // Detach the event listener when the component unmounts
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+
+
+
+    }, []);
+
+
+
+    const handleSignOut = async () => {
+        try {
+            await auth.signOut();
+            // Additional logic after signing out, if needed
+        } catch (error) {
+            console.error('Error signing out:', error.message);
+        }
+    };
+
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
+
+
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
@@ -60,10 +121,28 @@ function GlobalNav() {
                             Contact
                         </Nav.Link>
                     </Nav>
-                    <Link to="/login">
-                        <Button variant="outline-success" className="custom-button" >
-                            Login / Sign Up</Button>
-                    </Link>
+                    {signedIn ? (
+                        <div className="user-dropdown" ref={dropdownRef}>
+                            <div className="user-circle" onClick={toggleDropdown}>
+                                {user && user.email[0]}
+                            </div>
+                            {isDropdownOpen && (
+                                <div className="dropdown-content">
+                                    <p>Email: {user && user.email}</p>
+                                    <Link to="/login">
+                                        <button className={"sign-out-button"} onClick={handleSignOut}>Sign Out</button>
+                                    </ Link>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <Link to="/login">
+                            <Button variant="outline-success" className="custom-button">
+                                Login / Sign Up
+                            </Button>
+                        </Link>
+                    )}
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>

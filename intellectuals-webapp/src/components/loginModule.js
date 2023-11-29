@@ -1,8 +1,44 @@
 import '../css/LoginModule.css';
 import { Container, Form, FormControl, Button } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
+import { auth } from '../database/firebase';
+import{ createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth"
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 
 function LoginModule() {
+
+    //todo invalid email
+    //todo invalid password type ( at least 6 characters)
+    //todo check if user is signed it
+    //todo implement logic for when user is signed in DOING
+    //todo login from a created account
+
+    const navigate = useNavigate();
+    const handleAuth = async () => {
+
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            navigate('/');
+        } catch (signInError) {
+            if (signInError.code === 'auth/invalid-credential') {
+
+                try {
+                    const newUserCredentials = await createUserWithEmailAndPassword(auth, email, password);
+                    navigate('/');
+                } catch (signUpError) {
+                    console.error('sing up error: ' + signUpError.message);
+                    loginErrorHandling(signUpError.message);
+                }
+            } else {
+                console.error('log in error: ' + signInError.message);
+                loginErrorHandling(signInError.message);
+            }
+        }
+    };
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -12,15 +48,38 @@ function LoginModule() {
     const [errorEmailMessage, setErrorEmailMessage] = useState('');
     const [errorPasswordMessage, setErrorPasswordMessage] = useState('');
 
-
     useEffect(() => {
-        // Calculate the maximum label width
         const emailLabelWidth = document.getElementById('emailLabel').offsetWidth;
         const passwordLabelWidth = document.getElementById('passwordLabel').offsetWidth;
         setMaxLabelWidth(400);
-    }, []);
+        }, []);
 
+    const loginErrorHandling = (errorString) => {
+        if(errorString === 'Firebase: Error (auth/invalid-email).'){
+            setShowErrorEmail(true);
+            setErrorEmailMessage("Invalid email format")
+        }
+        else if (errorString === 'Firebase: Password should be at least 6 characters (auth/weak-password).'){
+            setShowErrorPassword(true);
+            setErrorPasswordMessage("Password must be at least 6 characters ")
+        }
+        else if (errorString === 'Firebase: Error (auth/email-already-in-use).'){
+            setShowErrorPassword(true);
+            setErrorPasswordMessage("Email is already in use, if this is your account the password is incorrect")
+        }
+        else if (errorString === 'Firebase: Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later. (auth/too-many-requests).'){
+            setShowErrorEmail(true);
+            setErrorEmailMessage("Account temporarily disabled due to too many login attempts")
+        }
+
+    }
     const tryLogin = () => {
+        if(email !== '' && password !== ''){
+            setShowErrorPassword(false);
+            setShowErrorEmail(false);
+            handleAuth().then(r => r);
+        }
+
         if (email === ''){
             setShowErrorEmail(true);
             setErrorEmailMessage("Missing email");
@@ -50,6 +109,7 @@ function LoginModule() {
         console.log('Email:', email);
         console.log('Password:', password);
         tryLogin();
+
     };
 
     return (
@@ -80,11 +140,12 @@ function LoginModule() {
                         }),
                     }}
                 />
-                {showErrorEmail && <div className={"error-message"} style={{ alignSelf: 'flex-start' }} >{errorEmailMessage}</div>}
+                {showErrorEmail && <div className={"error-message"} style={{ alignSelf: 'flex-start', flexWrap: 'wrap' }} >{errorEmailMessage}</div>}
 
             </Form>
             <Form onSubmit={handleFormSubmit}>
                 <Form.Label id="passwordLabel" className="textbox-title">Enter password</Form.Label>
+                <div className="password-container">
                 <FormControl
                     type="text"
                     placeholder="Password"
@@ -100,7 +161,12 @@ function LoginModule() {
                         }),
                     }}
                 />
-                {showErrorPassword && <div className={"error-message"} style={{ alignSelf: 'flex-start' }}>{errorPasswordMessage}</div>}
+                </div>
+                {showErrorPassword && (
+                    <div className="error-message-container">
+                        <div className="error-message">{errorPasswordMessage}</div>
+                    </div>
+                )}
             </Form>
 
             <Button
