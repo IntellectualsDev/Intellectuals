@@ -45,7 +45,41 @@
     transition: opacity 0.3s ease-in-out;
 
 }
+.buttonDiv{
+    width: 100%;
+    background-color: #0f5132;
+}
+.icon-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    background-color: #333; /* Default color */
+    border: none;
+    padding: 0;
+    z-index: 2;
+}
 
+.github {
+    margin-right: 30%;
+    margin-left: 15%;
+    background-color: gray; /* GitHub color */
+}
+
+.github:hover {
+    background-color: darkgray; /* Slightly lighter GitHub color */
+}
+
+.linkedin {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+.linkedin:hover {
+    background-color: #00a0dc; /* Slightly lighter LinkedIn color */
+}
 .fade-out {
     opacity: 0;
 }

@@ -5,6 +5,9 @@ import '../css/Profile.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Image } from 'react-bootstrap';
 import CommentModule from "./commentModule";
+import { Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 
 const Profile = ({JSON}) =>{
@@ -76,6 +79,26 @@ const Profile = ({JSON}) =>{
                         </Col>
                     </Row>
                     <Row className={'personalRow'}>
+                        <div className={'buttonDiv'}>
+                            <Button
+                                href="https://github.com/pokeham"
+                                className="icon-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faGithub} style={{fontSize:"50px"}} />
+                            </Button>
+
+                            {/* LinkedIn Button */}
+                            <Button
+                                href="https://linkedin.com/in/yourusername"
+                                className="icon-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize:"50px"}}/>
+                            </Button>
+                        </div>
 
                     </Row>
                 </Col>
