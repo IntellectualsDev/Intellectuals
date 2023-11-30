@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .hero-container {
     display: flex;
     flex-direction: row;
@@ -10,15 +12,16 @@
 }
 
 .hero-content {
+    max-width: 50%;
     width: 50%;
     margin-right: 200px;
     font-size: 17px;
-
 }
 .hero-content p{
     width: 120%;
     margin-top: 20px;
-    font-family: "Hiragino Maru Gothic ProN";
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: "Hiragino Maru Gothic ProN", Arial, sans-serif;*/
     font-weight: 500;
 }
 
@@ -26,7 +29,8 @@
     width: 150%;
     font-size: 55px;
     /*font-family: "Hiragino Maru Gothic ProN";*/
-    font-family: "Hiragino Kaku Gothic Pro";
+    /*font-family: "Hiragino Kaku Gothic Pro", Arial, sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     font-weight: 900;
 
     /*Space Grotesk,sans-serif;*/
@@ -94,8 +98,10 @@
     margin: 0 10px;
 }
 
-.colored-line {
-    color: yellow;
+
+#horizontal-divider {
+    height: 20px !important;
+    visibility: hidden;
 }
 
 .orb-canvas {

@@ -1,0 +1,53 @@
+.heading {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.textbox-title {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: start;
+    word-wrap: break-word;
+}
+
+.body {
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 40px;
+}
+
+.error-message{
+    color: #ff3333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    /*text-align: start;*/
+    align-self: flex-start;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+
+.error-message-container {
+    margin-top: 5px;
+    text-align: left;
+    max-width: 400px;
+}
+
+.password-container {
+    display: flex;
+}
+
+.whiteOutlineButton {
+    border-color: white;
+    color: white;
+}

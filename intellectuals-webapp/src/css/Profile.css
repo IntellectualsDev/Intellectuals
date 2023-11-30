@@ -1,0 +1,239 @@
+.mainDiv{
+
+    height: 305vh;
+    max-width: 100vw;
+    z-index: 2;
+}
+.titleContainer{
+    position: relative;
+    height: 55vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+}
+.title {
+    margin-bottom: 0.5rem;
+    font-size: 8rem; /* Adjust font size as needed */
+    color: white; /* Adjust color as needed */
+    font-weight: bolder;
+    /* Additional styling for the title */
+}
+.oval{
+    display: inline-block;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.arrow-container {
+
+    position: relative;
+    height: 50vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+.text-above-arrow {
+    font-size: 1.2rem;
+    color:white;
+}
+.fade-element {
+
+
+    transition: opacity 0.3s ease-in-out;
+
+}
+.buttonDiv{
+    width: 100%;
+    background-color: #0f5132;
+}
+.icon-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    background-color: #333; /* Default color */
+    border: none;
+    padding: 0;
+    z-index: 2;
+}
+
+.github {
+    margin-right: 30%;
+    margin-left: 15%;
+    background-color: gray; /* GitHub color */
+}
+
+.github:hover {
+    background-color: darkgray; /* Slightly lighter GitHub color */
+}
+
+.linkedin {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+.linkedin:hover {
+    background-color: #00a0dc; /* Slightly lighter LinkedIn color */
+}
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+.arrow {
+    color: white;
+    font-size: 30px; /* Adjust size as needed */
+    animation: bobbing 1.5s infinite; /* Apply the bobbing animation */
+    /* Additional styling for the arrow */
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Adjust the value for more/less movement */
+}
+.subtitle {
+    margin-top: 0.5rem;
+    font-size: 1.2rem; /* Adjust font size as needed */
+    /* Adjust color as needed */
+    /* Additional styling for the subtitle */
+}
+.topRow{
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+.leftProfile{
+    background-color: black;
+
+}
+.rightProfile{
+    background-color: black;
+}
+.trajectory{
+
+    height: 45%;
+    background-color: black;
+}
+.education{
+
+    background-color: black;
+}
+.experience{
+    background-color: black;
+}
+.skills{
+
+    height: 55%;
+}
+.technical{
+    background-color: black;
+}
+.personal {
+    background-color: black;
+}
+.roundedBox{
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 90%;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 -7px 0 rgba(230,57,70,1);
+}
+.textArea{
+    z-index: 2;
+    width: 90%;
+    height: 90%;
+    top:5%;
+    bottom: 5%;
+    left: 5%;
+    position: relative;
+    text-align: left;
+    color: black;
+    font-size: 10px;
+}
+.my-p{
+    z-index: 2;
+    text-align: left;
+    color: black;
+    font-size: 13px;
+}
+
+.trajectoryHeader{
+
+}
+.skillsHeader{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Theader{
+    margin-left: inherit;
+    text-align: left;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.Sheader{
+
+    text-align: left;
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+}
+.header{
+    z-index: 2;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+.textArea header{
+    z-index: 2;
+    text-align: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+.textArea my-p{
+    z-index: 2;
+    font-family: inherit;
+    text-align: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+.imageRow{
+    height: 60%;
+    background-color: black;
+}
+.personalRow{
+    height: 40%;
+    background-color: black;
+}
+.profileImage{
+    z-index: 2;
+}
+.bi-check-circle-fill{
+    z-index: 2;
+    color:red;
+    font-size: 20px;
+}
+.inline{
+    z-index: 2;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.bottomRow{
+    height: 100vh;
+    background-color: black;
+}
