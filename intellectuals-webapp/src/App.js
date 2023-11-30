@@ -15,8 +15,10 @@ import JosephsPage from './pages/josephPage.js';
 import RafasPage from './pages/rafaPage.js';
 import NitinsPage from './pages/nitinPage.js';
 import LoginPage from "./pages/loginPage";
+import ProjectsPage from "./pages/projectsPage";
 import Home from './Home'
 
+import ScrollToTop from "./components/ScrollToTop";
 /*
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -40,9 +42,15 @@ const app = initializeApp(firebaseConfig);
 
 
 function App() {
+
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+
   return (
       <Router>
         <div style={{backgroundColor: "#000000"}}>
+          {/*<ScrollToTop />*/}
 
           <Routes>
             <Route path="/" element={<Home />} />
@@ -51,6 +59,7 @@ function App() {
             <Route path="/rafa" element={<RafasPage />} />
             <Route path="/nitin" element={<NitinsPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/" element={<h1>Home Page</h1>} />
           </Routes>
         </div>
