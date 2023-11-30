@@ -25,25 +25,6 @@ function Home() {
             <GlobalNav />
             <HeroSection />
             <Timeline teamMembers={teamMembers}/>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/anshul">Anshul's Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/joseph">Joseph's Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/rafa">Rafa's Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/nitin">Nitin's Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/projects">Projects Page</Link>
-                    </li>
-                </ul>
-            </nav>
         </div>
     );
 }

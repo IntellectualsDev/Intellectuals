@@ -116,10 +116,9 @@ function LoginModule() {
     };
 
     return (
-        <Container
-            fluid
+        <div
             style={{
-                height: '100vh',  // Set the height to 100% of the viewport height
+                height: '75vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
@@ -202,7 +201,7 @@ function LoginModule() {
                 LOG IN / SIGN UP
             </Button>
 
-        </Container>
+        </div>
     )}
 
 export default LoginModule;

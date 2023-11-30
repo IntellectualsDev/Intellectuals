@@ -116,22 +116,13 @@ function GlobalNav() {
                             </div>
                         </NavDropdown>
 
-                        <NavDropdown title="Projects" id="projectsScrollingDropDown">
-                            <div className="navDropDown">
-                                <NavDropdown.Item href="#navWifiTherm" className= 'dropDownItem'>
-                                    Wifi Thermometer
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navIRTransmitReceive" className= 'dropDownItem'>
-                                    IR Transmitter & Receiver
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#Intellectuals WebApp" className= 'dropDownItem'>
-                                    Intellectuals Personal Website
-                                </NavDropdown.Item>
-                            </div>
-                        </NavDropdown>
+                        <Nav.Link href="/projects">
+                            Projects
+                        </Nav.Link>
                         <Nav.Link href="#">
                             Contact
                         </Nav.Link>
+
                     </Nav>
                     {user ? (
                         <div className="user-dropdown" ref={dropdownRef}>
@@ -162,6 +153,16 @@ function GlobalNav() {
 }
 export { GlobalNav} ;
 
+const ProjectsHeroSection = () => (
+    <div className="projects-hero-section"
+         style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/jigsaw.jpeg)` }}
+    >
+        <div className='project-hero-content'>
+            <h1>Discover Innovation</h1>
+            <p>Explore the projects that are shaping the future of technology.</p>
+        </div>
+    </div>
+);
 const HeroSection = () => {
     const [isOrbitingOrbFront, setIsOrbitingOrbFront] = useState(false);
 
