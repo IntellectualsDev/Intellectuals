@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
     BrowserRouter as Router,
     Routes,
@@ -13,9 +13,13 @@ import RafasPage from './pages/rafaPage.js';
 import NitinsPage from './pages/nitinPage.js';
 import {GlobalNav, HeroSection} from "./homepage";
 import Timeline from "./components/Timeline";
-import teamMembers from "./data/data";
+import {teamMembers} from "./data/data";
 
 function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div >
             <GlobalNav />
@@ -34,6 +38,9 @@ function Home() {
                     </li>
                     <li>
                         <Link to="/nitin">Nitin's Page</Link>
+                    </li>
+                    <li>
+                        <Link to="/projects">Projects Page</Link>
                     </li>
                 </ul>
             </nav>

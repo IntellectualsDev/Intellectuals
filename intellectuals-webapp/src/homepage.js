@@ -80,7 +80,7 @@ function GlobalNav() {
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
                 <Link to="/">
-                    <Navbar.Brand id = "logo-name" href="#">INTELLECTUALS</Navbar.Brand>
+                    <Navbar.Brand id = "logo-name">INTELLECTUALS</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
