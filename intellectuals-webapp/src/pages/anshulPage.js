@@ -9,7 +9,7 @@ import {
 
 const anshulPage = () => {
     return(
-        <h1>Hello</h1>
+        <h1>Hello2</h1>
 
         );
 };
