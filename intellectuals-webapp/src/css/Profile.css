@@ -1,0 +1,83 @@
+.mainDiv{
+    height: 200vh;
+    max-width: 100vw;
+
+}
+.topRow{
+    height: 120vh;
+    background-color: #0a53be;
+    position: relative;
+}
+.leftProfile{
+    background-color: #0dcaf0;
+
+}
+.rightProfile{
+    background-color: #0a3622;
+}
+.trajectory{
+    height: 60%;
+    background-color: #0b5ed7;
+}
+.education{
+    background-color: #0f5132;
+}
+.experience{
+    background-color: #0a58ca;
+}
+.skills{
+    height: 40%;
+}
+.technical{
+    background-color: #6ea8fe;
+}
+.personal {
+    background-color: #9ec5fe;
+}
+.roundedBox{
+    margin-left: auto;
+    margin-right: auto;
+    height: 70%;
+    width: 90%;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    top:25%;
+    box-shadow: 0 -7px 0 rgba(230,57,70,1);
+}
+.textArea{
+    width: 90%;
+    height: 90%;
+    top:5%;
+    bottom: 5%;
+    left: 5%;
+    position: relative;
+    text-align: left;
+    color: black;
+    font-size: 10px;
+}
+.my-p{
+    text-align: left;
+    color: black;
+    font-size: 13px;
+}
+.header{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+.textArea header{
+    text-align: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+.textArea my-p{
+    text-align: inherit;
+    color: inherit;
+    font-size: inherit;
+}
+.bottomRow{
+
+    height: 80vh;
+    background-color: red;
+}
