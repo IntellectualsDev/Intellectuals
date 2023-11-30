@@ -171,8 +171,8 @@ const JosephPageData ={
         'personal_skill3',
         'personal_skill4',
 
-    ]
-
-
+    ],
+    about:"THIS IS ALL ABOUT ME HEHEHHEHEH",
+    name:"Joseph"
 }
 export {JosephPageData}

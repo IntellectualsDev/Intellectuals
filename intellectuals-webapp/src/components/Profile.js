@@ -11,6 +11,7 @@ const Profile = ({JSON}) =>{
 
 
     return (
+
         <div className={'mainDiv'}>
 
 
@@ -29,12 +30,13 @@ const Profile = ({JSON}) =>{
                         <img src = {process.env.PUBLIC_URL + '/display-pic.png'}
                              alt = "Profile Image"
                              className={'profileImage image'}
-                             style={{width:"auto", height:"60%",marginTop:"10%"}}
+                             style={{width:"auto", height:"60%",marginTop:"5%"}}
                         />
                         </Col>
                     </Row>
                     <Row className={'personalRow'}>
-
+                        <h1 className={'header'}>About Me!</h1>
+                        <p className={'my-p'}>{JSON.about}</p>
                     </Row>
                 </Col>
 
