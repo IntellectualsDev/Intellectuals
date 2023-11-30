@@ -18,7 +18,7 @@ import LoginPage from "./pages/loginPage";
 import ProjectsPage from "./pages/projectsPage";
 import Home from './Home'
 
-import ScrollToTop from "./components/ScrollToTop";
+//import ScrollToTop from "./components/ScrollToTop";
 /*
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

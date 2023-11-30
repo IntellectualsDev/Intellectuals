@@ -124,3 +124,7 @@ More Specificity required to override the Bootstrap CSS*/
     text-decoration: underline;
     cursor: pointer;
 }
+
+.redirecting-style{
+    text-decoration: none;
+}

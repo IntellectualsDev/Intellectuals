@@ -79,7 +79,7 @@ function GlobalNav() {
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
-                <Link to="/">
+                <Link to="/" className={"redirecting-style"}>
                     <Navbar.Brand id = "logo-name">INTELLECTUALS</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -91,18 +91,28 @@ function GlobalNav() {
                     >
                         <NavDropdown title="Team" id="teamScrollingDropdown">
                             <div className="navDropDown">
-                                <NavDropdown.Item href="#navAnshulPage" className= 'dropDownItem'>
-                                    Anshul Gowda
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navJosephPage" className= 'dropDownItem'>
-                                    Joseph Bart
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navRafaPage" className= 'dropDownItem'>
-                                    Rafa Rangel de la Tejera
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="navNitinPage" className= 'dropDownItem'>
-                                    Nitin Nagarkar
-                                </NavDropdown.Item>
+                                <Link to="/anshul" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navAnshulPage" className= 'dropDownItem'>
+                                        Anshul Gowda
+                                    </NavDropdown.Item>
+                                </Link>
+                                <Link to="/joseph" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navJosephPage" className= 'dropDownItem'>
+                                        Joseph Bart
+                                    </NavDropdown.Item>
+                                </ Link>
+
+                                <Link to="/rafa" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navRafaPage" className= 'dropDownItem'>
+                                        Rafa Rangel de la Tejera
+                                    </NavDropdown.Item>
+                                </ Link>
+
+                                <Link to="/nitin" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="navNitinPage" className= 'dropDownItem'>
+                                        Nitin Nagarkar
+                                    </NavDropdown.Item>
+                                </ Link>
                             </div>
                         </NavDropdown>
 
