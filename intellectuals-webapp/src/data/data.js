@@ -148,4 +148,31 @@ const teamMembers = [
     // ... more team members
 ];
 
-export default teamMembers;
+export {teamMembers};
+const JosephPageData ={
+    education:[
+        'BSE Computer Science',
+        'Minor in Arts'
+    ],
+    experience:[
+        'Work1',
+        'Work2',
+        'Work3'
+    ],
+    professional:[
+        'prof_skill1',
+        'prof_skill2',
+        'prof_skill3',
+        'prof_skill4',
+    ],
+    personal:[
+        'personal_skill1',
+        'personal_skill2',
+        'personal_skill3',
+        'personal_skill4',
+
+    ]
+
+
+}
+export {JosephPageData}

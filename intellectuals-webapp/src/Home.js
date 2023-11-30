@@ -13,7 +13,7 @@ import RafasPage from './pages/rafaPage.js';
 import NitinsPage from './pages/nitinPage.js';
 import {GlobalNav, HeroSection} from "./homepage";
 import Timeline from "./components/Timeline";
-import teamMembers from "./data/data";
+import {teamMembers} from "./data/data";
 
 function Home() {
     return (
