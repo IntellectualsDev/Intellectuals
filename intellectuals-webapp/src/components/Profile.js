@@ -9,15 +9,56 @@ import CommentModule from "./commentModule";
 
 const Profile = ({JSON}) =>{
 
+    let lastScrollTop = 0;
 
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scrolling down
+            document.querySelectorAll('.fade-element').forEach(el => {
+                el.classList.remove('fade-in');
+                el.classList.add('fade-out');
+            });
+        } else {
+            // Scrolling up
+            document.querySelectorAll('.fade-element').forEach(el => {
+                el.classList.remove('fade-out');
+                el.classList.add('fade-in');
+            });
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+    }, false);
     return (
-
         <div className={'mainDiv'}>
 
 
         <Container
             fluid
         >
+            <div className={"fade-element"}>
+                <Row className={'titleContainer'}>
+                    <Col>
+                        <h1 className="title">{JSON.name}</h1>
+                        <div className={'oval'}>
+                            <h2 className="subtitle">{JSON.about}</h2>
+                        </div>
+
+                    </Col>
+
+                </Row>
+                <Row className={'arrow-container'}>
+                    <Col xs = {12} style={{height:"20vh"}}>
+                        <h2 className="text-above-arrow">Scroll Down</h2>
+                        <div className={'arrow'}>
+                            <i className="bi bi-arrow-bar-down arrow"/>
+                        </div>
+
+                    </Col>
+
+                </Row>
+            </div>
+
             <Row className={'topRow'}>
                 <Col xs = {1}>
 
@@ -35,8 +76,7 @@ const Profile = ({JSON}) =>{
                         </Col>
                     </Row>
                     <Row className={'personalRow'}>
-                        <h1 className={'header'}>About Me!</h1>
-                        <p className={'my-p'}>{JSON.about}</p>
+
                     </Row>
                 </Col>
 

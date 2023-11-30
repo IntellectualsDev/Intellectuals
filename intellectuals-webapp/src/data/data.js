@@ -172,7 +172,7 @@ const JosephPageData ={
         'personal_skill4',
 
     ],
-    about:"THIS IS ALL ABOUT ME HEHEHHEHEH",
+    about:"Computer Science Engineer",
     name:"Joseph"
 }
 export {JosephPageData}
