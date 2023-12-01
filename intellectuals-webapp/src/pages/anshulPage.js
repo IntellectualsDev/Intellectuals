@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimatedHomepageHeroGraphic from "../components/AnimatedHomepageHeroGraphic";
-import '../css/NewHeroSection.css'
+import '../css/AnimatedHomepageHero.css'
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
