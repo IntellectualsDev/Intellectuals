@@ -7,28 +7,18 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 import {GlobalNav} from "../homepage";
+import StarsHero from "../components/StarsHero";
+import {JosephPageData} from "../data/data";
+import Profile from "../components/Profile";
+import CommentsModule from "../components/commentsModule";
 
 const anshulPage = () => {
     return(
         <div>
-            <h1>Hello</h1>
-            {/*<div>*/}
-            {/*    <Container className='opaque-container' fluid>*/}
-            {/*        <div className='animated-squares'>*/}
-            {/*            <AnimatedProjectsHeroGraphic />*/}
-            {/*        </div>*/}
-            {/*        <Row>*/}
-            {/*            <Col xs ={12} className='hero-top'>*/}
-            {/*            </Col>*/}
-            {/*            <Col xs ={12} className='anim-hero-content'>*/}
-            {/*                <h1>Discover Innovation</h1>*/}
-            {/*                <h2>Explore the projects that are shaping the future of technology.</h2>*/}
-            {/*            </Col>*/}
-            {/*            <Col xs ={12} className='hero-bottom'>*/}
-            {/*            </Col>*/}
-            {/*        </Row>*/}
-            {/*    </Container>*/}
-            {/*</div>*/}
+            <GlobalNav />
+            <StarsHero data={JosephPageData}/>
+            <Profile JSON={JosephPageData}/>
+            <CommentsModule pathPage={"/Joseph"}/>
         </div>
         );
 };
