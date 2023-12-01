@@ -222,6 +222,7 @@ const ColoredLine = ({ color }) => (
             backgroundColor: color,
             height: 5,
             opacity: 1,
+            zIndex: 4,
         }}
     />
 
