@@ -8,14 +8,19 @@ import LoginModule from "./loginModule";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import '../css/CommentSection.css'
+import '../css/GlobalNav.css'
 
-function CommentsModule() {
+function CommentsModule({pathPage}) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [comments, setComments] = useState([]);
     const [currComment,setCurrComment] = useState("");
 
+    let palettes = ["#E5C1BD", "#662E9B", "#43BCCD", "#7FB069", "#D36135", "#02020B", "#33888a", "#57c1ac", "#233e3c" ,'#000000', '#832161', '#DA4167']
+
     useEffect(() => {
+
+
         const unsubscribe = auth.onAuthStateChanged((user) => {
             setUser(user);
             setLoading(false);
@@ -26,10 +31,22 @@ function CommentsModule() {
         };
     }, []);
 
+    const fetchComments = async () => {
+        try {
+            const commentsPath = `Pages${pathPage}/Comments`;
+            const snapshot = await get(ref(database, commentsPath));
+            const commentsArray = snapshot.val() || [];
+            setComments(Object.values(commentsArray));
+        } catch (error) {
+            console.error('Error fetching comments:', error.message);
+            setComments([]);
+        }
+    };
+
     const writeComment = async () => {
         try {
             const dateTime = new Date().toLocaleString();
-            const path = `Pages/Rafa/Comments`;
+            const path = `Pages${pathPage}/Comments`;
             const snapshot = await get(ref(database, path));
             const currList = snapshot.val() || [];
             const newList = [...currList];
@@ -44,24 +61,17 @@ function CommentsModule() {
 
             await set(ref(database, path), newList);
 
+            setCurrComment('');
+
+            await fetchComments();
             console.log('Data updated successfully');
         } catch (error) {
             console.error('Error updating data:', error.message);
         }
     };
 
+
     useEffect(() => {
-        const fetchComments = async () => {
-            try {
-                const commentsPath = `Pages/Rafa/Comments`;
-                const snapshot = await get(ref(database, commentsPath));
-                const commentsArray = snapshot.val() || [];
-                setComments(Object.values(commentsArray));
-            } catch (error) {
-                console.error('Error fetching comments:', error.message);
-                setComments([]);
-            }
-        };
 
             fetchComments().then(r => r);
 
@@ -72,67 +82,60 @@ function CommentsModule() {
     }
 
     return (
-        <div>
-            <Button
-                variant="outline-success"
-                type="submit"
-                onClick={writeComment}
-                style={{
-                    fontFamily: 'Roboto, sans-serif',
-                    backgroundColor: '#FB2576',
-                    outlineColor: '#FB2576',
-                    color: 'white',
-                    border: 'none',
-                    transition: 'all 0.3s ease-in-out',
-                }}
-            >
-                Write to database now
-            </Button>
+        <div className={"maindiv"}>
             <Container className={"comments-container"} fluid>
                 <Row>
                     {comments.length === 0 ? (
                         <p style={{ color: 'white' }}>No comments</p>
                     ) : (
                         comments.map((comment, index) => (
-                            <Col key={index} xs = {12} className={'comment-container'}>
-                                <div  className={'comment-box'} style={{color :"white"}}>
-                                    {/*todo put all of this in a comment container*/}
-                                    <p className={'comment-user'}>{ comment.userEmail}</p>
-                                    <p className={'comment-date'}>{`Date: ${comment.time}`}</p>
-                                    <p className={'comment-data'}>{`Comment: ${comment.data}`}</p>
+                            <Col key={index} xs = {12} className={'comments-container'}>
+
+                                <div className={"circle-for-comment"}>
+
+                                    <div className="comment-user-circle" style={{backgroundColor: "blue"}}>
+                                        {comment && comment.userEmail[0]}
+                                    </div>
+                                    <p style={{ color: 'white', marginTop:'4px', marginLeft: '-40px' }}>{comment.userEmail}</p>
                                 </div>
+                                    <p className={'comment-data'}>{`Comment: ${comment.data}`}</p>
+                                <p className={'comment-date'}>{` ${comment.time}`}</p>
+
                             </Col>
                         ))
                     )}
 
-                    {user ? ( <Col xs = {12} className={'comment-container-current'}>
-                                <div className={'comment-box'}>
-                                    <p className={'comment-user'}>{user.email}</p>
-                                    <div className={'button-and-text-area'}>
-                                        <Form>
-                                            <Form.Group controlId="exampleForm.ControlTextarea1">
-                                                <Form.Label className={'comment-header'}>Comment:</Form.Label>
-                                                <Form.Control
-                                                    as="textarea"
-                                                    rows={3}
-                                                    className="custom-textarea"
-                                                    value={currComment}
-                                                    onChange={(e) => setCurrComment(e.target.value)}
-                                                />
-                                            </Form.Group>
-
-                                        </Form>
-                                        <div className={'custom-container'}>
-                                            <Button variant="primary" onClick={writeComment} className="custom-button">
-                                                <FaPaperPlane className={'icon'}/>
-                                            </Button>
+                    {user ? (
+                        <Col xs={12} className={'upload-column'} style={{borderTop: "1px solid white"}}>
+                            <div className="comment-section">
+                                <Form>
+                                    <div className={"circle-for-comment"}>
+                                        <div className="comment-user-circle" style={{backgroundColor: "#E63946"}}>
+                                            {user && user.email[0]}
                                         </div>
+                                        <p style={{ color: 'white', marginTop:'4px', marginLeft: '-40px' }}>{user.email}</p>
                                     </div>
-                                </div>
+
+                                    <Form.Group controlId="commentTextArea">
+                                        <Form.Control
+                                            className={'custom-textarea'}
+                                            as="textarea"
+                                            rows={3}
+                                            style={{ width: '80vw', minWidth: '200px', marginTop: '0.2%',height: ''}}
+                                            placeholder="Write your comment..."
+                                            value={currComment}
+                                            onChange={(e) => setCurrComment(e.target.value)}
+                                        />
+                                    </Form.Group>
+                                    <Button variant="outline-success" className={"sign-out-button"} style={{ position:"relative",zIndex: "5" ,marginTop:'10px'}} onClick={writeComment} >
+                                        Submit
+                                    </Button>
+                                </Form>
+                            </div>
+                        </Col>
 
 
-                            </Col>
-                    ) :
+                        ) :
                                 <Col xs={12} style={{
                                     display: "flex",
                                     flexDirection: "column",

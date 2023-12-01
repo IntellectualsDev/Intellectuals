@@ -187,10 +187,11 @@ const Profile = ({JSON}) =>{
                 </Col>
             </Row>
             <Row className = {'bottomRow'}>
-                {/*<CommentModule/>*/}
 
             </Row>
+
         </Container>
+
         </div>
 
     )
