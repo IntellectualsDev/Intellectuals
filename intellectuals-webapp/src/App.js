@@ -1,3 +1,11 @@
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from 'react-router-dom';
+
 import { GlobalNav, HeroSection } from './homepage';
 import Timeline from './components/Timeline';
 import teamMembers from "./data/data";
