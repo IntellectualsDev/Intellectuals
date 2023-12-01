@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Card } from 'react-bootstrap';
 import '../css/Timeline.css';
 import "bootstrap-icons/font/bootstrap-icons.css"; // Bootstrap Icons
+import {ColoredLine} from "../homepage";
 
 
 // Variants for the profile image and text
@@ -141,16 +142,18 @@ const Timeline = ({ teamMembers }) => {
     }, []);
 
     return (
-        <div className="timeline-container">
-            <div className="timeline-line"></div>
-            {teamMembers.map((member, index) => (
-                <TimelineItem
-                    key={member.id}
-                    member={member}
-                    isMinimized={index !== focusedItem}
-                    ref={itemRefs.current[index]}
-                />
-            ))}
+        <div>
+            <div className="timeline-container">
+                <div className="timeline-line"></div>
+                {teamMembers.map((member, index) => (
+                    <TimelineItem
+                        key={member.id}
+                        member={member}
+                        isMinimized={index !== focusedItem}
+                        ref={itemRefs.current[index]}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

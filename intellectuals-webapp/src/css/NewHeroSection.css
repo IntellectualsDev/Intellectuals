@@ -11,23 +11,23 @@
     width: 100vw;
     height: 15vh;
     position: relative;
-    z-index: 5;
+    z-index: 3;
 }
 
 .anim-hero-content{
     width: 100vw;
     height: 45vh;
     position: relative;
-    z-index: 5;
+    z-index: 3;
     /*background: rgba(0, 0, 0, 0.45);*/
 
 }
 
 .hero-bottom{
     width: 100vw;
-    height: 5vh;
+    height: 40vh;
     position: relative;
-    z-index: 5;
+    z-index: 3;
 }
 
 /*.hero-title{*/
@@ -61,7 +61,10 @@
     /*padding: 6vh 0 0 25vh;*/
 }
 
-.opaque-container::after {
+.opaque-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.45);
     z-index: 3;
 }
