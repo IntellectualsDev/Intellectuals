@@ -64,23 +64,30 @@ const TimelineItem = React.forwardRef(({ member, isMinimized }, ref) => (
                 variants={profileImageVariants}
                 animate={isMinimized ? "minimized" : "maximized"}
             >
-                <img src={member.image} alt={member.name} className="profile-image" />
+                <a href={member.link}>
+                    <img src={member.image} alt={member.name} className="profile-image" />
+                </a>
+
             </motion.div>
             <motion.div
                 className="profile-text-container"
                 variants={profileTextVariants}
                 animate={isMinimized ? "minimized" : "maximized"}
             >
-                <h3 id='team-name-header'>{member.name}</h3>
+
+
+
+                    <h3 id='team-name-header'>{member.name}</h3>
+
                 <span className="badge badge-secondary">{member.role}</span>
             </motion.div>
         </div>
 
         <motion.div
-            className="timeline-icon"
-            variants={timelineIconVariants}
-            animate={isMinimized ? "minimized" : "maximized"}
-        ></motion.div>
+    className="timeline-icon"
+    variants={timelineIconVariants}
+    animate={isMinimized ? "minimized" : "maximized"}
+    />
 
         {/*<div className="timeline-icon"></div> /!* Circle icon on the timeline *!/*/}
 

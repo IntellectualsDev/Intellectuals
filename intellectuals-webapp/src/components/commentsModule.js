@@ -20,27 +20,6 @@ function CommentsModule() {
         };
     }, []);
 
-    const initDb = async () => {
-        try {
-            const commentData = { data: 'Test comment' };
-            const userInfo = {userId: 'Bob@gmail.com'}
-            const dateTime = new Date().toLocaleString();
-            const json = {
-                "time" : dateTime,
-                "data": "Initial comment",
-                "userEmail": user.email,
-            }
-
-            const path = "Pages/Eli/Comments";
-            const newList = [json];
-            await set(ref(database, path), newList);
-
-            console.log('Data updated successfully');
-        } catch (error) {
-            console.error('Error updating data:', error.message);
-        }
-
-    };
     const writeComment = async () => {
         try {
             const commentData = { comment: 'Added comment' };
