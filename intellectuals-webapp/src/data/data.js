@@ -569,7 +569,8 @@ const JosephPageData ={
     ],
     about:"Computer Science Engineer",
     name:"Joseph",
-    aboutMe:"Hi! My name is Joseph and i hate all of you :)"
+    aboutMe:"Hi! My name is Joseph and i hate all of you :)",
+    imagePath:"/joseph_profilephoto.png"
 }
 export {JosephPageData}
 
@@ -666,9 +667,9 @@ const AnshulPageData ={
         'Charmer',
         'Funny',
     ],
-    about:"Athletic Engineer",
-    name:"Rafa",
-    aboutMe:"Hi! I am from México",
-    imagePath:"/rafa-pic.png"
+    about:"Sleepy Engineer",
+    name:"Anshul",
+    aboutMe:"Lolita :)",
+    imagePath:"/anshul_profilephoto.png"
 }
 export {AnshulPageData}
