@@ -69,7 +69,7 @@ const Profile = ({JSON}) =>{
                 <Col xs = {10} className={'leftProfile'} >
                     <Row>
                         <Col xs ={4}>
-                            <img  src = {process.env.PUBLIC_URL + '/display-pic.png'}
+                            <img  src = {process.env.PUBLIC_URL + JSON.imagePath}
                                   alt = "Profile Image"
                                   className={'profileImage image'}
                                   style={{width:"auto", height:"25vw",marginTop:"5%"}}

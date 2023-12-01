@@ -83,7 +83,9 @@ function CommentsModule({pathPage}) {
 
     return (
         <div className={"maindiv"}>
+            <h1 className={'Theader'}>Comments</h1>
             <Container className={"comments-container"} fluid>
+
                 <Row>
                     {comments.length === 0 ? (
                         <p style={{ color: 'white' }}>No comments</p>

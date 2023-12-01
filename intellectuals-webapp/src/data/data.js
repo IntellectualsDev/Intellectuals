@@ -573,3 +573,53 @@ const JosephPageData ={
 }
 export {JosephPageData}
 
+const RafaPageData ={
+    education:[
+        'BSE Electrical and Computer Science Engineering : University of Iowa',
+        'MSE Electrical and Computer Science Engineering : University of Iowa',
+        'Minor in Computers Science : University of Iowa',
+        'Minor in Mathematics : University of Iowa',
+    ],
+    experience:[
+        'Mobile engineer intern, Caseys',
+        'Software engineer intern, Caseys',
+        'Resident Assistant, University of Iowa',
+        'Teaching assistant for Introduction for Computer engineering, University of Iowa ',
+        'Supplemental Instruction leader, University of Iowa',
+
+    ],
+    professional:[
+        'React Framework',
+        'Node Framework',
+        'JavaScript',
+        'Java',
+        'OpenGL',
+    ],
+    professional2:[
+        'C++,C,C#',
+        'Python',
+        'MySql,NoSQL',
+        'AVR Assembly',
+        'Relational Databases',
+    ],
+    personal:[
+        'LeaderShip',
+        'Communication',
+        'Fast Learner',
+        'Charisma',
+        'Intelligent',
+    ],
+    personal2:[
+        'Problem solver',
+        'Cool',
+        'Athletic',
+        'Charmer',
+        'Funny',
+    ],
+    about:"Athletic Engineer",
+    name:"Rafa",
+    aboutMe:"Hi! I am from México",
+    imagePath:"/rafa-pic.png"
+}
+export {RafaPageData}
+
