@@ -248,6 +248,7 @@
     background-color: black;
 }
 .profileImage{
+    position: relative;
     z-index: 2;
 }
 .bi-check-circle-fill{
