@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 
 import {GlobalNav} from "../homepage";
 import StarsHero from "../components/StarsHero";
-import {JosephPageData} from "../data/data";
+import {AnshulPageData, JosephPageData} from "../data/data";
 import Profile from "../components/Profile";
 import CommentsModule from "../components/commentsModule";
 
@@ -16,9 +16,9 @@ const anshulPage = () => {
     return(
         <div>
             <GlobalNav />
-            <StarsHero data={JosephPageData}/>
-            <Profile JSON={JosephPageData}/>
-            <CommentsModule pathPage={"/Joseph"}/>
+            <StarsHero data={AnshulPageData}/>
+            <Profile JSON={AnshulPageData}/>
+            <CommentsModule pathPage={"/Anshul"}/>
         </div>
         );
 };

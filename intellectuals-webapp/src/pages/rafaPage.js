@@ -12,7 +12,7 @@ const rafaPage = () => {
             <GlobalNav />
             <StarsHero data={RafaPageData}/>
             <Profile JSON={RafaPageData}/>
-            <CommentsModule pathPage={"/Joseph"}/>
+            <CommentsModule pathPage={"/Rafa"}/>
         </div>
     );
 };
