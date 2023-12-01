@@ -37,7 +37,10 @@ More Specificity required to override the Bootstrap CSS*/
     /*margin-right: 3rem !important;!* Add space between the button and the right edge *!*/
     transition: all 0.3s ease-in-out !important;/* Smooth transition for hover effect */
 }
-
+.bi-patch-check-fill{
+    font-size: 25px;
+    margin-right: -8px;
+}
 .custom-button {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 700;
