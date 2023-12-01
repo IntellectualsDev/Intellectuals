@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,17 +6,80 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Canvas } from "react-three-fiber";
 import Orb from './components/Orb'
+import { onAuthStateChanged } from 'firebase/auth';
 import OrbitingOrb from "./components/OrbitingOrb";
 
 import './css/HeroSection.css';
 import './css/GlobalNav.css';
 import {Link} from "react-router-dom";
 
+//todo
+import { auth } from './database/firebase';
+import {browserSessionPersistence, setPersistence} from "firebase/auth";
+
+//todo
+
+
 function GlobalNav() {
+
+    const [user, setUser] = useState(null);
+    const [signedIn, setSignedIn] = useState(false);
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
+    const [loading, setLoading] = useState(true);
+
+
+
+    useEffect(() => {
+
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                // Clicked outside the dropdown, close it
+                setDropdownOpen(false);
+            }
+        };
+
+        // Attach the event listener when the component mounts
+        document.addEventListener('mousedown', handleClickOutside);
+
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setUser(user);
+            setLoading(false);
+        });
+        // Detach the event listener when the component unmounts
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+            unsubscribe();
+        };
+
+
+
+    }, []);
+
+
+
+    const handleSignOut = async () => {
+        try {
+            await auth.signOut();
+            // Additional logic after signing out, if needed
+        } catch (error) {
+            console.error('Error signing out:', error.message);
+        }
+    };
+
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
-                <Link to="/">
+                <Link to="/" className={"redirecting-style"}>
                     <Navbar.Brand id = "logo-name">INTELLECTUALS</Navbar.Brand>
                 </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -28,42 +91,61 @@ function GlobalNav() {
                     >
                         <NavDropdown title="Team" id="teamScrollingDropdown">
                             <div className="navDropDown">
-                                <NavDropdown.Item href="#navAnshulPage" className= 'dropDownItem'>
-                                    Anshul Gowda
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navJosephPage" className= 'dropDownItem'>
-                                    Joseph Bart
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navRafaPage" className= 'dropDownItem'>
-                                    Rafa Rangel de la Tejera
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="navNitinPage" className= 'dropDownItem'>
-                                    Nitin Nagarkar
-                                </NavDropdown.Item>
+                                <Link to="/anshul" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navAnshulPage" className= 'dropDownItem'>
+                                        Anshul Gowda
+                                    </NavDropdown.Item>
+                                </Link>
+                                <Link to="/joseph" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navJosephPage" className= 'dropDownItem'>
+                                        Joseph Bart
+                                    </NavDropdown.Item>
+                                </ Link>
+
+                                <Link to="/rafa" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navRafaPage" className= 'dropDownItem'>
+                                        Rafa Rangel de la Tejera
+                                    </NavDropdown.Item>
+                                </ Link>
+
+                                <Link to="/nitin" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="navNitinPage" className= 'dropDownItem'>
+                                        Nitin Nagarkar
+                                    </NavDropdown.Item>
+                                </ Link>
                             </div>
                         </NavDropdown>
 
-                        <NavDropdown title="Projects" id="projectsScrollingDropDown">
-                            <div className="navDropDown">
-                                <NavDropdown.Item href="#navWifiTherm" className= 'dropDownItem'>
-                                    Wifi Thermometer
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navIRTransmitReceive" className= 'dropDownItem'>
-                                    IR Transmitter & Receiver
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#Intellectuals WebApp" className= 'dropDownItem'>
-                                    Intellectuals Personal Website
-                                </NavDropdown.Item>
-                            </div>
-                        </NavDropdown>
+                        <Nav.Link href="/projects">
+                            Projects
+                        </Nav.Link>
                         <Nav.Link href="#">
                             Contact
                         </Nav.Link>
+
                     </Nav>
-                    <Link to="/login">
-                        <Button variant="outline-success" className="custom-button" >
-                            Login / Sign Up</Button>
-                    </Link>
+                    {user ? (
+                        <div className="user-dropdown" ref={dropdownRef}>
+                            <div className="user-circle" onClick={toggleDropdown}>
+                                {user && user.email[0]}
+                            </div>
+                            {isDropdownOpen && (
+                                <div className="dropdown-content">
+                                    <p>Email: {user && user.email}</p>
+                                    <Link to="/login">
+                                        <button className={"sign-out-button"} onClick={handleSignOut}>Sign Out</button>
+                                    </ Link>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <Link to="/login">
+                            <Button variant="outline-success" className="custom-button">
+                                Login / Sign Up
+                            </Button>
+                        </Link>
+                    )}
+
                 </Navbar.Collapse>
             </Container>
         </Navbar>
@@ -71,6 +153,16 @@ function GlobalNav() {
 }
 export { GlobalNav} ;
 
+const ProjectsHeroSection = () => (
+    <div className="projects-hero-section"
+         style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/jigsaw.jpeg)` }}
+    >
+        <div className='project-hero-content'>
+            <h1>Discover Innovation</h1>
+            <p>Explore the projects that are shaping the future of technology.</p>
+        </div>
+    </div>
+);
 const HeroSection = () => {
     const [isOrbitingOrbFront, setIsOrbitingOrbFront] = useState(false);
 
@@ -135,4 +227,4 @@ const ColoredLine = ({ color }) => (
 
 );
 
-export { ColoredLine };
+export { ColoredLine, auth};

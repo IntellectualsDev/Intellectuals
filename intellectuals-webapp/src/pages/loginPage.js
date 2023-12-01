@@ -5,7 +5,7 @@ import LoginModule from "../components/loginModule";
 
 const LoginPage = () => {
     return (
-        <div style={{backgroundColor: '#000000'}}>
+        <div style={{backgroundColor: '#000000',display: "flex", flexDirection: "column"}}>
             <GlobalNav />
             <LoginModule />
         </div>
