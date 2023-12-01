@@ -16,19 +16,19 @@ const teamMembers = [
                 id: 'p2',
                 title: "Yale Kidney BioBank Automated ML Pipeline",
                 description: "Created a ML automated pipeline to extract and standardized data from PDF kidney biopsy reports",
-                image: "/YaleMLPipeline_LargePhoto.png", // Replace with actual path
+                image: "/YaleMLPipeline_SmallPhoto.png", // Replace with actual path
             },
             {
                 id: 'p3',
                 title: "Delirium Identification Publication",
                 description: "Conducted a systematic review of delirium identification and training under the mentorship of Dr. Sangil Lee MD",
-                image: "/wifitherm_largephoto.png", // Replace with actual path
+                image: "/DeliriumPublication_LargePhoto.png", // Replace with actual path
             },
             {
                 id: 'p4',
                 title: "Intellecuals Web app FrontEnd",
-                description: "Designed and implemented the Intellectuals webapp frontend",
-                image: "/wifitherm_smallphoto.png", // Replace with actual path
+                description: "Member of the Intellectuals Development Team who aided in the design, architecture, and implementation of the React & Google FirebaseIntellectuals Web Application. ",
+                image: "/IntellectualsWebApp_SmallPhoto.png", // Replace with actual path
             },
         ],
     },
