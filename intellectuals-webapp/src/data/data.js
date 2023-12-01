@@ -484,29 +484,44 @@ export {projects};
 
 const JosephPageData ={
     education:[
-        'BSE Computer Science',
-        'Minor in Arts'
+        'BSE Computer Science : University of Iowa',
+        'Minor in Arts : University of Iowa',
+        'High School Diploma : Iowa City West High'
     ],
     experience:[
-        'Work1',
-        'Work2',
-        'Work3'
+        'Student IT Specialist : UIHC : Iowa City, IA',
     ],
     professional:[
-        'prof_skill1',
-        'prof_skill2',
-        'prof_skill3',
-        'prof_skill4',
+        'React Framework',
+        'Node Framework',
+        'JavaScript',
+        'Java',
+        'OpenGL',
+    ],
+    professional2:[
+        'C++,C,C#',
+        'Python',
+        'MySql,NoSQL',
+        'AVR Assembly',
+        'Relational Databases',
     ],
     personal:[
-        'personal_skill1',
-        'personal_skill2',
-        'personal_skill3',
-        'personal_skill4',
-
+        'LeaderShip',
+        'Communication',
+        'Fast Learner',
+        'Charisma',
+        'Swagger',
+    ],
+    personal2:[
+        'Smart',
+        'Cool',
+        'Sexy',
+        'Athletic',
+        'Intellectual',
     ],
     about:"Computer Science Engineer",
-    name:"Joseph"
+    name:"Joseph",
+    aboutMe:"Hi! My name is Joseph and i hate all of you :)"
 }
 export {JosephPageData}
 
