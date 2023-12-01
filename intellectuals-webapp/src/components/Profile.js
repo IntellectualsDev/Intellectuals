@@ -71,7 +71,7 @@ const Profile = ({JSON}) =>{
                         <Col xs ={12} className={"d-flex justify-content-center align-content-center"}>
 
 
-                        <img src = {process.env.PUBLIC_URL + '/display-pic.png'}
+                        <img  src = {process.env.PUBLIC_URL + '/display-pic.png'}
                              alt = "Profile Image"
                              className={'profileImage image'}
                              style={{width:"auto", height:"60%",marginTop:"5%"}}
@@ -79,36 +79,36 @@ const Profile = ({JSON}) =>{
                         </Col>
                     </Row>
                     <Row className={'personalRow'}>
-                        <div className={'buttonDiv'}>
-                            <Button
-                                href="https://github.com/pokeham"
-                                className="icon-button"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faGithub} style={{fontSize:"50px"}} />
-                            </Button>
+                        {/*<div className={'buttonDiv'}>*/}
+                        {/*    <Button*/}
+                        {/*        href="https://github.com/pokeham"*/}
+                        {/*        className="icon-button"*/}
+                        {/*        target="_blank"*/}
+                        {/*        rel="noopener noreferrer"*/}
+                        {/*    >*/}
+                        {/*        <FontAwesomeIcon icon={faGithub} style={{fontSize:"50px"}} />*/}
+                        {/*    </Button>*/}
 
-                            {/* LinkedIn Button */}
-                            <Button
-                                href="https://linkedin.com/in/yourusername"
-                                className="icon-button"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize:"50px"}}/>
-                            </Button>
-                        </div>
+                        {/*    /!* LinkedIn Button *!/*/}
+                        {/*    <Button*/}
+                        {/*        href="https://linkedin.com/in/yourusername"*/}
+                        {/*        className="icon-button"*/}
+                        {/*        target="_blank"*/}
+                        {/*        rel="noopener noreferrer"*/}
+                        {/*    >*/}
+                        {/*        <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize:"50px"}}/>*/}
+                        {/*    </Button>*/}
+                        {/*</div>*/}
 
                     </Row>
                 </Col>
 
                 <Col className={'rightProfile'}>
                     <Row className={'trajectory'}>
-                        <Col xs = {9} className={'trajectoryHeader'}>
+                        <Col  xs = {9} className={'trajectoryHeader'}>
                             <h1 className={'Theader'}>Trajectory</h1>
                         </Col>
-                        <Col xs = {5} className={'education'}>
+                        <Col  xs = {5} className={'education'}>
                             <div className={'roundedBox'}>
                                 <div className={'textArea'}>
                                     <h1 className={'header'}>Education</h1>
@@ -121,7 +121,7 @@ const Profile = ({JSON}) =>{
                                 </div>
                             </div>
                         </Col>
-                        <Col className={'experience'}>
+                        <Col  className={'experience'}>
                             <div className={'roundedBox'}>
                                 <div className={'textArea'}>
                                     <h1 className={'header'}>Experience</h1>
@@ -136,10 +136,10 @@ const Profile = ({JSON}) =>{
                         </Col>
                     </Row>
                     <Row className={'skills'}>
-                        <Col xs = {9} className={'skillsHeader'}>
+                        <Col   xs = {9} className={'skillsHeader'}>
                             <h1 className={'Sheader'}>Skills</h1>
                         </Col>
-                        <Col xs = {7} className={'technical'}>
+                        <Col  xs = {7} className={'technical'}>
 
                             <div className={'roundedBox'}>
                                 <div className={'textArea'}>
@@ -167,7 +167,7 @@ const Profile = ({JSON}) =>{
                                 </div>
                             </div>
                         </Col>
-                        <Col className={'personal'}>
+                        <Col  className={'personal'}>
                             <div className={'roundedBox'}>
                                 <div className={'textArea'}>
                                     <h1 className={'header'}>Personal</h1>

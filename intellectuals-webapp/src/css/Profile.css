@@ -49,6 +49,10 @@
     width: 100%;
     background-color: #0f5132;
 }
+#delayedElement {
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-out; /* This creates the delayed movement */
+}
 .icon-button {
     display: inline-flex;
     justify-content: center;

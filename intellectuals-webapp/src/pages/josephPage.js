@@ -9,7 +9,6 @@ const josephPage = () => {
         <div style={{backgroundColor: '#000000'}}>
             <GlobalNav />
             <StarsHero data={JosephPageData}/>
-
             <Profile JSON={JosephPageData}/>
         </div>
     );

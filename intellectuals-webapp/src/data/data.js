@@ -1,6 +1,7 @@
 const teamMembers = [
     {
         id: 1,
+        link:'/anshul',
         name: "Anshul Gowda",
         role: "Electrical Engineering, BSE & Pre-Medicine",
         image: "/display-pic.png", // Replace with actual path
@@ -34,6 +35,7 @@ const teamMembers = [
 
     {
         id: 2,
+        link:'/rafa',
         name: "Rafael Rangel de la Tejera",
         role: "Electrical Engineering, BSE",
         image: "/display-pic.png", // Replace with actual path
@@ -88,6 +90,7 @@ const teamMembers = [
 
     {
         id: 3,
+        link:'/nitin',
         name: "Eli Paulsen",
         role: "Computer Science Engineering, BSE",
         image: "/display-pic.png", // Replace with actual path
@@ -115,6 +118,7 @@ const teamMembers = [
 
     {
         id: 4,
+        link:'/joseph',
         name: "Joseph Bartoszczyk",
         role: "Computer Science Engineering, BSE",
         image: "/display-pic.png", // Replace with actual path

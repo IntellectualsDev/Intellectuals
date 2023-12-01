@@ -24,6 +24,10 @@ function CommentsModule() {
             unsubscribe();
         };
     }, []);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0926e2aa11dd8d01fb80fc1a1b833d0f386635c0
     const writeComment = async () => {
         try {
             const dateTime = new Date().toLocaleString();
