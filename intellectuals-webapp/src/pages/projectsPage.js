@@ -105,13 +105,6 @@ const ProjectsPage = () => {
         <div className="projects-page">
             <GlobalNav />
             <ProjectsHeroSection />
-            <Container fluid = 'lg'>
-                <Row>
-                    <Col>
-                        <h1 className={"heading"}>All Projects</h1>
-                    </Col>
-                </Row>
-            </Container>
             <Row>
                     <h4 className={"heading"}>Featured Projects:</h4>
             </Row>

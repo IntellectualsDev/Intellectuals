@@ -7,7 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Canvas } from "react-three-fiber";
 import Orb from './components/Orb'
 import { onAuthStateChanged } from 'firebase/auth';
-import OrbitingOrb from "./components/OrbitingOrb";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 
 import './css/HeroSection.css';
 import './css/GlobalNav.css';
@@ -16,6 +17,8 @@ import {Link} from "react-router-dom";
 //todo
 import { auth } from './database/firebase';
 import {browserSessionPersistence, setPersistence} from "firebase/auth";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 //todo
 
@@ -79,9 +82,7 @@ function GlobalNav() {
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
-                <Link to="/">
-                    <Navbar.Brand id = "logo-name">INTELLECTUALS</Navbar.Brand>
-                </Link>
+                <Navbar.Brand href='/' id = "logo-name">INTELLECTUALS</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -191,6 +192,12 @@ const HeroSection = () => {
                     {/*</div>*/}
                 </div>
             </div>
+            <Row className={'home-arrow-container'}>
+                    <h2 className="home-text-above-arrow">Scroll Down</h2>
+                    <div className={'home-arrow'}>
+                        <i className="bi bi-arrow-bar-down arrow"/>
+                    </div>
+            </Row>
             <hr style={{
                 background: '#E63946',
                 color: '#E63946',

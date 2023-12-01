@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 73vh;
     color: #fff;
     padding: 0 50px;
     background-color: #000;
@@ -107,4 +107,29 @@
 .orb-canvas {
     position: absolute;
 
+}
+
+.home-text-above-arrow {
+    font-size: 1.2rem;
+    color:white;
+}
+.home-arrow-container {
+
+    position: relative;
+    height: 10vh !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+.home-arrow {
+    color: white;
+    font-size: 30px; /* Adjust size as needed */
+    animation: bobbing 1.5s infinite; /* Apply the bobbing animation */
+    /* Additional styling for the arrow */
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Adjust the value for more/less movement */
 }
