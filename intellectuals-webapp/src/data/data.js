@@ -571,7 +571,6 @@ const JosephPageData ={
     name:"Joseph",
     aboutMe:"Hi! My name is Joseph and i hate all of you :)",
     imagePath:"/joseph_profilephoto.png"
-
 }
 export {JosephPageData}
 

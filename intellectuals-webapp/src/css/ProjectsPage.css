@@ -74,7 +74,7 @@
 
 .projects-hero-top{
     width: 100vw;
-    height: 15vh;
+    height: 5vh;
     position: relative;
     /*z-index: 3;*/
 }
@@ -92,7 +92,7 @@
 
 .projects-hero-bottom{
     width: 100vw;
-    height: 40vh;
+    height: 20vh;
     position: relative;
     text-align: center;
     padding-top: 9vh;

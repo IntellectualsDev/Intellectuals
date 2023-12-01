@@ -251,16 +251,16 @@ const AnimatedProjectsHero = () => {
                 <Row>
                     <Col xs ={12} className='projects-hero-top'>
                     </Col>
-                    <Col xs ={8} className='projects-anim-hero-content'>
+                    <Col xs ={10} className='projects-anim-hero-content'>
                         <h1>Blueprints of Brilliance</h1>
                         <h2>Intellectuals blend cutting-edge technology with practical functionality, driving progress with each solution."</h2>
                     </Col>
                     <Col>
 
                     </Col>
-                    <Col xs ={8} className='projects-hero-bottom'>
+                    <Col xs ={2} className='projects-hero-bottom'>
                     </Col>
-                    <Col xs ={4} className='projects-hero-bottom'>
+                    <Col xs ={12} className='projects-hero-bottom'>
                         <h2 id = "project-arrow-down-text" className="text-above-arrow">Scroll Down</h2>
                         <div id = "project-arrow-down" className={'arrow'}>
                             <i className="bi bi-arrow-bar-down arrow"/>
