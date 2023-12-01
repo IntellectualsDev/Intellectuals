@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from 'react-bootstrap';
+import {Link} from "react-router-dom";
 import '../css/Timeline.css';
 import "bootstrap-icons/font/bootstrap-icons.css"; // Bootstrap Icons
 import {ColoredLine} from "../homepage";
@@ -103,14 +104,16 @@ const TimelineItem = React.forwardRef(({ member, isMinimized }, ref) => (
                     <Card.Body>
                         <Card.Title className='card-title'>{project.title}</Card.Title>
                         <Card.Text>{project.description}</Card.Text>
-                        <Card.Link href="#">View</Card.Link>
+                        <Card.Link href="/projects">View</Card.Link>
                     </Card.Body>
                 </Card>
             ))}
             <div className="view-more-container">
-                <button className="view-more-icon">
-                    <i className="bi bi-three-dots"></i>
-                </button>
+                <Link to='/projects'>
+                    <button className="view-more-icon">
+                        <i className="bi bi-three-dots"></i>
+                    </button>
+                </Link>
             </div>
         </motion.div>
     </div>

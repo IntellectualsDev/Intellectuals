@@ -4,31 +4,31 @@ const teamMembers = [
         link:'/anshul',
         name: "Anshul Gowda",
         role: "Electrical Engineering, BSE & Pre-Medicine",
-        image: "/display-pic.png", // Replace with actual path
+        image: "/anshul_profilephoto.png", // Replace with actual path
         projects: [
             {
                 id: 'p1',
                 title: "WiFi Thermometer",
-                description: "Embedded systems project that consists of a thermometer that connects to a website... TODO",
-                image: "/logo192.png", // Replace with actual path
+                description: " Wifi Thermometer blending RaspberryPi and Node.js technology for temperature monitoring and communication.",
+                image: "/wifitherm_largephoto.png", // Replace with actual path
             },
             {
                 id: 'p2',
                 title: "Yale Kidney BioBank Automated ML Pipeline",
                 description: "Created a ML automated pipeline to extract and standardized data from PDF kidney biopsy reports",
-                image: "/logo192.png", // Replace with actual path
+                image: "/YaleMLPipeline_SmallPhoto.png", // Replace with actual path
             },
             {
                 id: 'p3',
-                title: "Delirium Identification Training Publication Lee Lab",
+                title: "Delirium Identification Publication",
                 description: "Conducted a systematic review of delirium identification and training under the mentorship of Dr. Sangil Lee MD",
-                image: "/logo192.png", // Replace with actual path
+                image: "/DeliriumPublication_LargePhoto.png", // Replace with actual path
             },
             {
                 id: 'p4',
                 title: "Intellecuals Web app FrontEnd",
-                description: "Designed and implemented the Intellectuals webapp frontend",
-                image: "/logo192.png", // Replace with actual path
+                description: "Member of the Intellectuals Development Team who aided in the design, architecture, and implementation of the React & Google FirebaseIntellectuals Web Application. ",
+                image: "/IntellectualsWebApp_SmallPhoto.png", // Replace with actual path
             },
         ],
     },
@@ -38,7 +38,7 @@ const teamMembers = [
         link:'/rafa',
         name: "Rafael Rangel de la Tejera",
         role: "Electrical Engineering, BSE",
-        image: "/display-pic.png", // Replace with actual path
+        image: "/rafa-pic.png", // Replace with actual path
         projects: [
             {
                 id: 'p1',
@@ -121,7 +121,7 @@ const teamMembers = [
         link:'/joseph',
         name: "Joseph Bartoszczyk",
         role: "Computer Science Engineering, BSE",
-        image: "/display-pic.png", // Replace with actual path
+        image: "/joseph_profilephoto.png", // Replace with actual path
         projects: [
             {
                 id: 'p1',
@@ -567,7 +567,7 @@ const JosephPageData ={
         'Athletic',
         'Intellectual',
     ],
-    about:"Computer Science Engineer",
+    about:"Emo/Skater Boy Engineer",
     name:"Joseph",
     aboutMe:"Hi! My name is Joseph and i hate all of you :)",
     imagePath:"/joseph_profilephoto.png"
@@ -626,50 +626,53 @@ export {RafaPageData}
 
 const AnshulPageData ={
     education:[
-        'BSE Electrical and Computer Science Engineering : University of Iowa',
-        'MSE Electrical and Computer Science Engineering : University of Iowa',
-        'Minor in Computers Science : University of Iowa',
-        'Minor in Mathematics : University of Iowa',
+        'Electrical Engineering BSE, University of Iowa, May 2024',
+        'Computer Science Minor, University of Iowa, May 2024',
+        'Pre-Medicine Track',
+        'Ko-Chang and Maria Weiyi Pan Engineering Scholarship',
+        'Volunteer UI Free Mobile Clinic'
     ],
     experience:[
-        'Mobile engineer intern, Caseys',
-        'Software engineer intern, Caseys',
-        'Resident Assistant, University of Iowa',
-        'Teaching assistant for Introduction for Computer engineering, University of Iowa ',
-        'Supplemental Instruction leader, University of Iowa',
+        'Founder/Director, Grad Path 504 Non-profit',
+        'Research Assistant, Yale University School of Medicine\'s CTRA',
+        'Clinical Research Assistant, UIHC Emergency Department',
+        'Alumni, Yale University\'s KUH Undergraduate Summer Research Internship',
+        'Research Assistant, ImagiQ ',
 
     ],
     professional:[
-        'React Framework',
+        'React.js',
         'Node Framework',
         'JavaScript',
         'Java',
-        'OpenGL',
+        'Natural Language Procesing',
+        'Decentralized Architecture'
     ],
     professional2:[
-        'C++,C,C#',
-        'Python',
-        'MySql,NoSQL',
+        'C++,C',
+        'Python, Django',
+        'MySql,MongoDB, MariaDB',
         'AVR Assembly',
-        'Relational Databases',
+        'Data Scraping',
+        'Git VCS'
     ],
     personal:[
-        'LeaderShip',
+        'Drive',
+        'Empathy',
         'Communication',
-        'Fast Learner',
-        'Charisma',
-        'Intelligent',
+        'Intellectual',
+        'Problem Solving',
     ],
     personal2:[
-        'Problem solver',
-        'Cool',
-        'Athletic',
-        'Charmer',
-        'Funny',
+        'Foodie!',
+        'Travel Nut',
+        'Bourdain Fan!',
+        'Tennis!',
+        'Friend :)',
     ],
-    about:"Sleepy Engineer",
-    name:"Anshul",
-    aboutMe:"Lolita :)",
+    about:"Edible Engineer",
+    name:"Anshul Gowda",
+    aboutMe:"Existentialism, Wit, and a craving for good Dosa and Web Development",
     imagePath:"/anshul_profilephoto.png"
 }
 export {AnshulPageData}
