@@ -3,11 +3,16 @@ import { set, get, ref } from 'firebase/database';
 import { auth, database } from '../database/firebase';
 import { Button } from 'react-bootstrap';
 import Container from "react-bootstrap/Container";
+import LoginModule from "./loginModule";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import '../css/CommentSection.css'
 
 function CommentsModule() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [comments, setComments] = useState([]);
+    const [currComment,setCurrComment] = useState("");
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -19,31 +24,8 @@ function CommentsModule() {
             unsubscribe();
         };
     }, []);
-
-    const initDb = async () => {
-        try {
-            const commentData = { data: 'Test comment' };
-            const userInfo = {userId: 'Bob@gmail.com'}
-            const dateTime = new Date().toLocaleString();
-            const json = {
-                "time" : dateTime,
-                "data": "Initial comment",
-                "userEmail": user.email,
-            }
-
-            const path = "Pages/Eli/Comments";
-            const newList = [json];
-            await set(ref(database, path), newList);
-
-            console.log('Data updated successfully');
-        } catch (error) {
-            console.error('Error updating data:', error.message);
-        }
-
-    };
     const writeComment = async () => {
         try {
-            const commentData = { comment: 'Added comment' };
             const dateTime = new Date().toLocaleString();
             const path = `Pages/Rafa/Comments`;
             const snapshot = await get(ref(database, path));
@@ -52,7 +34,7 @@ function CommentsModule() {
 
             const json = {
                 "time" : dateTime,
-                "data": "Initial comment",
+                "data": currComment,
                 "userEmail": user.email,
             }
 
@@ -105,25 +87,34 @@ function CommentsModule() {
             >
                 Write to database now
             </Button>
-            <Container className={"comments-container"}>
+            <Container className={"comments-container"} fluid>
+                <Row>
+                    {comments.length === 0 ? (
+                        <p style={{ color: 'white' }}>No comments</p>
+                    ) : (
 
+
+                        comments.map((comment, index) => (
+                            <Col xs = {12} className={'comment-container'}>
+                                <div key={index} className={'comment-box'} style={{color :"white"}}>
+                                    {/*todo put all of this in a comment container*/}
+                                    <p className={'comment-user'}>{ comment.userEmail}</p>
+                                    <p className={'comment-date'}>{`Date: ${comment.time}`}</p>
+                                    <p className={'comment-data'}>{`Comment: ${comment.data}`}</p>
+                                </div>
+                            </Col>
+                        ))
+                    )}
+                    <Col xs = {12} className={'comments-container'} style = {{backgroundColor:"red"}}>
+                        <div className={'comment-box'} style={{color :"white"}}>
+                            <p className={'comment-user'}>{user.email}</p>
+
+
+                        </div>
+                    </Col>
+                </Row>
             </Container>
-            {comments.length === 0 ? (
-                <p style={{ color: 'white' }}>No comments</p>
-            ) : (
 
-
-                comments.map((comment, index) => (
-                    <div key={index} style={{ color: 'white' }}>
-{/*todo put all of this in a comment container*/}
-                        <p>{`Author: ${comment.userEmail}`}</p>
-                        <p>{`Date: ${comment.time}`}</p>
-                        <p>{`Comment: ${comment.data}`}</p>
-
-
-                    </div> //do one container for each comment
-                ))
-            )}
         </div>
     );
 }

@@ -7,8 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Canvas } from "react-three-fiber";
 import Orb from './components/Orb'
 import { onAuthStateChanged } from 'firebase/auth';
-import "bootstrap-icons/font/bootstrap-icons.css";
-
+import OrbitingOrb from "./components/OrbitingOrb";
 
 import './css/HeroSection.css';
 import './css/GlobalNav.css';
@@ -17,8 +16,6 @@ import {Link} from "react-router-dom";
 //todo
 import { auth } from './database/firebase';
 import {browserSessionPersistence, setPersistence} from "firebase/auth";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
 
 //todo
 
@@ -82,7 +79,9 @@ function GlobalNav() {
     return (
         <Navbar expand="lg" id="navbar" className="bg-body-tertiary" sticky='top' bg="dark" data-bs-theme="dark">
             <Container fluid>
-                <Navbar.Brand href='/' id = "logo-name">INTELLECTUALS</Navbar.Brand>
+                <Link to="/" className={"redirecting-style"}>
+                    <Navbar.Brand id = "logo-name">INTELLECTUALS</Navbar.Brand>
+                </Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -92,37 +91,38 @@ function GlobalNav() {
                     >
                         <NavDropdown title="Team" id="teamScrollingDropdown">
                             <div className="navDropDown">
-                                <NavDropdown.Item href="#navAnshulPage" className= 'dropDownItem'>
-                                    Anshul Gowda
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navJosephPage" className= 'dropDownItem'>
-                                    Joseph Bart
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navRafaPage" className= 'dropDownItem'>
-                                    Rafa Rangel de la Tejera
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="navNitinPage" className= 'dropDownItem'>
-                                    Nitin Nagarkar
-                                </NavDropdown.Item>
+                                <Link to="/anshul" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navAnshulPage" className= 'dropDownItem'>
+                                        Anshul Gowda
+                                    </NavDropdown.Item>
+                                </Link>
+                                <Link to="/joseph" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navJosephPage" className= 'dropDownItem'>
+                                        Joseph Bart
+                                    </NavDropdown.Item>
+                                </ Link>
+
+                                <Link to="/rafa" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="#navRafaPage" className= 'dropDownItem'>
+                                        Rafa Rangel de la Tejera
+                                    </NavDropdown.Item>
+                                </ Link>
+
+                                <Link to="/nitin" className={"redirecting-style"}>
+                                    <NavDropdown.Item href="navNitinPage" className= 'dropDownItem'>
+                                        Nitin Nagarkar
+                                    </NavDropdown.Item>
+                                </ Link>
                             </div>
                         </NavDropdown>
 
-                        <NavDropdown title="Projects" id="projectsScrollingDropDown">
-                            <div className="navDropDown">
-                                <NavDropdown.Item href="#navWifiTherm" className= 'dropDownItem'>
-                                    Wifi Thermometer
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#navIRTransmitReceive" className= 'dropDownItem'>
-                                    IR Transmitter & Receiver
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#Intellectuals WebApp" className= 'dropDownItem'>
-                                    Intellectuals Personal Website
-                                </NavDropdown.Item>
-                            </div>
-                        </NavDropdown>
+                        <Nav.Link href="/projects">
+                            Projects
+                        </Nav.Link>
                         <Nav.Link href="#">
                             Contact
                         </Nav.Link>
+
                     </Nav>
                     {user ? (
                         <div className="user-dropdown" ref={dropdownRef}>
@@ -153,6 +153,16 @@ function GlobalNav() {
 }
 export { GlobalNav} ;
 
+const ProjectsHeroSection = () => (
+    <div className="projects-hero-section"
+         style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/jigsaw.jpeg)` }}
+    >
+        <div className='project-hero-content'>
+            <h1>Discover Innovation</h1>
+            <p>Explore the projects that are shaping the future of technology.</p>
+        </div>
+    </div>
+);
 const HeroSection = () => {
     const [isOrbitingOrbFront, setIsOrbitingOrbFront] = useState(false);
 
@@ -166,21 +176,21 @@ const HeroSection = () => {
                 </div>
                 <div className="images-container">
                     {/*<div className="image-container">*/}
-                        {/*<Canvas className="orb-canvas" style={{ width: '100%', height: '100%', }}>*/}
-                        {/*<Canvas className="orb-canvas" style={{ width: '70%', height: '70%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>*/}
-                        {/*    <Orb color="#fff702" factor={10} ambientColor='0x404040'/>*/}
-                        {/*</Canvas>*/}
-                        <Canvas id = 'big-orb-canvas' className="orb-canvas" style={{ width: '62%', height: '62%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>
-                            <Orb color="#FFFD82" factor={3} ambientColor='#FFFD82'/>
-                        </Canvas>
-                        {/* Orb 2 - Medium and placed in the center */}
-                        <Canvas id = 'medium-orb-canvas' className="orb-canvas" style={{ width: '45%', height: '45%', top: '8%', left: '10%', transform: 'translate(20%, -20%)' }}>
-                            <Orb color="#61E786" factor={10} ambientColor='#61E786' />
-                        </Canvas>
-                        {/*/!* Orb 3 - Smallest and placed top left *!/*/}
-                        <Canvas id = 'small-orb-canvas' className="orb-canvas" style={{ width: '25%', height: '25%', top: '38%', left: '-40%', transform: 'translate(20%, -30%)'}}>
-                            <Orb color="#ED217C" factor={30} ambientColor='#ED217C'/>
-                        </Canvas>
+                    {/*<Canvas className="orb-canvas" style={{ width: '100%', height: '100%', }}>*/}
+                    {/*<Canvas className="orb-canvas" style={{ width: '70%', height: '70%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>*/}
+                    {/*    <Orb color="#fff702" factor={10} ambientColor='0x404040'/>*/}
+                    {/*</Canvas>*/}
+                    <Canvas id = 'big-orb-canvas' className="orb-canvas" style={{ width: '62%', height: '62%',top: '-10%', left: '-5%', transform: 'translate(20%, -10%)' }}>
+                        <Orb color="#FFFD82" factor={3} ambientColor='#FFFD82'/>
+                    </Canvas>
+                    {/* Orb 2 - Medium and placed in the center */}
+                    <Canvas id = 'medium-orb-canvas' className="orb-canvas" style={{ width: '45%', height: '45%', top: '8%', left: '10%', transform: 'translate(20%, -20%)' }}>
+                        <Orb color="#61E786" factor={10} ambientColor='#61E786' />
+                    </Canvas>
+                    {/*/!* Orb 3 - Smallest and placed top left *!/*/}
+                    <Canvas id = 'small-orb-canvas' className="orb-canvas" style={{ width: '25%', height: '25%', top: '38%', left: '-40%', transform: 'translate(20%, -30%)'}}>
+                        <Orb color="#ED217C" factor={30} ambientColor='#ED217C'/>
+                    </Canvas>
                     {/*</div>*/}
 
 
@@ -192,12 +202,6 @@ const HeroSection = () => {
                     {/*</div>*/}
                 </div>
             </div>
-            <Row className={'home-arrow-container'}>
-                    <h2 className="home-text-above-arrow">Scroll Down</h2>
-                    <div className={'home-arrow'}>
-                        <i className="bi bi-arrow-bar-down arrow"/>
-                    </div>
-            </Row>
             <hr style={{
                 background: '#E63946',
                 color: '#E63946',
