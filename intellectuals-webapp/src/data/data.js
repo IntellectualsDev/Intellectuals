@@ -153,6 +153,335 @@ const teamMembers = [
 ];
 
 export {teamMembers};
+
+const projects = [
+    {
+        featured:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+
+    {
+        electrical:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+    {
+        software:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+
+    {
+        misc:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+    {
+        anshul:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+    {
+        rafa:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+    {
+        joseph:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    },
+    {
+        //TODO: change
+        nitin:[
+            {
+                id: 1,
+                image: '/slide1.jpg',
+                imageBg: '/slide1b.webp',
+                title: '1983'
+            },
+            {
+                id: 2,
+                image: '/slide2.jpg',
+                imageBg: '/slide2b.webp',
+                title: 'Russian doll'
+            },
+            {
+                id: 3,
+                image: '/slide3.jpg',
+                imageBg: '/slide3b.webp',
+                title: 'The rain',
+            },
+            {
+                id: 4,
+                image: '/slide4.jpg',
+                imageBg: '/slide4b.webp',
+                title: 'Sex education'
+            },
+            {
+                id: 5,
+                image: '/slide5.jpg',
+                imageBg: '/slide5b.webp',
+                title: 'Elite'
+            },
+            {
+                id: 6,
+                image: '/slide6.jpg',
+                imageBg: '/slide6b.webp',
+                title: 'Black mirror'
+            },
+        ]
+    }
+];
+
+export {projects};
+
 const JosephPageData ={
     education:[
         'BSE Computer Science',
@@ -180,3 +509,4 @@ const JosephPageData ={
     name:"Joseph"
 }
 export {JosephPageData}
+

@@ -5,84 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {GlobalNav} from "../homepage";
-
-const projects = [
-    {
-        id: 1,
-        image: '/slide1.jpg',
-        imageBg: '/slide1b.webp',
-        title: '1983'
-    },
-    {
-        id: 2,
-        image: '/slide2.jpg',
-        imageBg: '/slide2b.webp',
-        title: 'Russian doll'
-    },
-    {
-        id: 3,
-        image: '/slide3.jpg',
-        imageBg: '/slide3b.webp',
-        title: 'The rain',
-    },
-    {
-        id: 4,
-        image: '/slide4.jpg',
-        imageBg: '/slide4b.webp',
-        title: 'Sex education'
-    },
-    {
-        id: 5,
-        image: '/slide5.jpg',
-        imageBg: '/slide5b.webp',
-        title: 'Elite'
-    },
-    {
-        id: 6,
-        image: '/slide6.jpg',
-        imageBg: '/slide6b.webp',
-        title: 'Black mirror'
-    }
-];
-
-// const movies = [
-//     {
-//         id: 1,
-//         image: '/display-pic.png',
-//         imageBg: '/logo192.png',
-//         title: 'Project 1'
-//     },
-//     {
-//         id: 2,
-//         image: '/display-pic.png',
-//         imageBg: '/logo192.png',
-//         title: 'Project 2'
-//     },
-//     {
-//         id: 3,
-//         image: '/display-pic.png',
-//         imageBg: '/logo192.png',
-//         title: 'Project 3'
-//     },
-//     {
-//         id: 4,
-//         image: '/display-pic.png',
-//         imageBg: '/logo192.png',
-//         title: 'Project 4'
-//     },
-//     {
-//         id: 5,
-//         image: '/display-pic.png',
-//         imageBg: '/logo192.png',
-//         title: 'Project 5'
-//     },
-//     {
-//         id: 6,
-//         image: '/display-pic.png',
-//         imageBg: '/logo192.png',
-//         title: 'Project 6'
-//     }
-// ];
+import {projects} from "../data/data"
 
 const ProjectsHeroSection = () => (
     <div className="projects-hero-section"
@@ -108,27 +31,76 @@ const ProjectsPage = () => {
             <Row>
                     <h4 className={"heading"}>Featured Projects:</h4>
             </Row>
+
             <Slider>
-                {projects.map(project => (
-                    <Slider.Item project={project} key={project.id}>item1</Slider.Item>
+                {projects[0].featured.map((project, index) => (
+                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
                 ))}
             </Slider>
             <Row>
-                <h4 className={"heading"}>Embedded Systems:</h4>
+                <h4 className={"heading"}>Electrical Engineering:</h4>
             </Row>
+
             <Slider>
-                {projects.map(project => (
-                    <Slider.Item project={project} key={project.id}>item1</Slider.Item>
+                {projects[1].electrical.map((project, index) => (
+                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
                 ))}
             </Slider>
             <Row>
-                <h4 className={"heading"}>Data Engineering:</h4>
+                <h4 className={"heading"}>Software Development:</h4>
             </Row>
+
             <Slider>
-                {projects.map(project => (
-                    <Slider.Item project={project} key={project.id}>item1</Slider.Item>
+                {projects[2].software.map((project, index) => (
+                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
                 ))}
             </Slider>
+
+            <Row>
+                <h4 className={"heading"}>Miscellaneous:</h4>
+            </Row>
+            <Slider>
+                {projects[3].misc.map((project, index) => (
+                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
+                ))}
+            </Slider>
+
+            //TODO: migrate to personal pages with proper styling
+            {/*<Row>*/}
+            {/*    <h4 className={"heading"}>Anshul's Projects:</h4>*/}
+            {/*</Row>*/}
+            {/*<Slider>*/}
+            {/*    {projects[4].anshul.map((project, index) => (*/}
+            {/*        <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>*/}
+            {/*    ))}*/}
+            {/*</Slider>*/}
+
+            {/*<Row>*/}
+            {/*    <h4 className={"heading"}>Rafa's Projects:</h4>*/}
+            {/*</Row>*/}
+            {/*<Slider>*/}
+            {/*    {projects[5].rafa.map((project, index) => (*/}
+            {/*        <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>*/}
+            {/*    ))}*/}
+            {/*</Slider>*/}
+
+            {/*<Row>*/}
+            {/*    <h4 className={"heading"}>Joseph's Projects:</h4>*/}
+            {/*</Row>*/}
+            {/*<Slider>*/}
+            {/*    {projects[6].joseph.map((project, index) => (*/}
+            {/*        <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>*/}
+            {/*    ))}*/}
+            {/*</Slider>*/}
+
+            {/*<Row>*/}
+            {/*    <h4 className={"heading"}>Nitin's Projects:</h4>*/}
+            {/*</Row>*/}
+            {/*<Slider>*/}
+            {/*    {projects[7].nitin.map((project, index) => (*/}
+            {/*        <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>*/}
+            {/*    ))}*/}
+            {/*</Slider>*/}
         </div>
     );
 }
