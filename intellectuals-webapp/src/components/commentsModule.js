@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, } from 'react';
 import { set, get, ref } from 'firebase/database';
 import { auth, database } from '../database/firebase';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import Container from "react-bootstrap/Container";
+import { FaPaperPlane } from 'react-icons/fa';
 import LoginModule from "./loginModule";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -62,9 +63,8 @@ function CommentsModule() {
             }
         };
 
-        if (user) {
             fetchComments().then(r => r);
-        }
+
     }, [user]);
 
     if (loading) {
@@ -93,11 +93,9 @@ function CommentsModule() {
                     {comments.length === 0 ? (
                         <p style={{ color: 'white' }}>No comments</p>
                     ) : (
-
-
                         comments.map((comment, index) => (
-                            <Col xs = {12} className={'comment-container'}>
-                                <div key={index} className={'comment-box'} style={{color :"white"}}>
+                            <Col key={index} xs = {12} className={'comment-container'}>
+                                <div  className={'comment-box'} style={{color :"white"}}>
                                     {/*todo put all of this in a comment container*/}
                                     <p className={'comment-user'}>{ comment.userEmail}</p>
                                     <p className={'comment-date'}>{`Date: ${comment.time}`}</p>
@@ -106,13 +104,53 @@ function CommentsModule() {
                             </Col>
                         ))
                     )}
-                    <Col xs = {12} className={'comments-container'} style = {{backgroundColor:"red"}}>
-                        <div className={'comment-box'} style={{color :"white"}}>
-                            <p className={'comment-user'}>{user.email}</p>
+
+                    {user ? ( <Col xs = {12} className={'comment-container-current'}>
+                                <div className={'comment-box'}>
+                                    <p className={'comment-user'}>{user.email}</p>
+                                    <div className={'button-and-text-area'}>
+                                        <Form>
+                                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                                <Form.Label className={'comment-header'}>Comment:</Form.Label>
+                                                <Form.Control
+                                                    as="textarea"
+                                                    rows={3}
+                                                    className="custom-textarea"
+                                                    value={currComment}
+                                                    onChange={(e) => setCurrComment(e.target.value)}
+                                                />
+                                            </Form.Group>
+
+                                        </Form>
+                                        <div className={'custom-container'}>
+                                            <Button variant="primary" onClick={writeComment} className="custom-button">
+                                                <FaPaperPlane className={'icon'}/>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-                        </div>
-                    </Col>
+                            </Col>
+                    ) :
+                                <Col xs={12} style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    paddingBottom:"6%",
+                                    paddingTop:"2%"
+                                }}>
+                                    <p className="text-white">Log in or Sign up to comment </p>
+                                    <a href = '/login'>
+                                        <Button variant="outline-success" size="lg" style={{backgroundColor:"#E63946",border:'none', width: "200px" }}>
+                                            Log in / Sign up
+                                        </Button>
+                                    </a>
+
+                                </Col>}
+
+
                 </Row>
             </Container>
 

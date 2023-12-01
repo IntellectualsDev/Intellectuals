@@ -118,11 +118,12 @@ function LoginModule() {
     return (
         <div
             style={{
-                height: '75vh',
+                height: '92vh',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
+                overflowY:"hidden"
             }}
         >
             <h1 className={"heading"}>Welcome 👋 </h1>

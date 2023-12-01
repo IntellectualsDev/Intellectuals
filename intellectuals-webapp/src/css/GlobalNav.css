@@ -34,7 +34,7 @@ More Specificity required to override the Bootstrap CSS*/
 }
 
 .custom-button {
-    margin-right: 3rem;
+    margin-right: 25px;
 }
 
 /* Hover effect for the "Login / Sign Up" button */
