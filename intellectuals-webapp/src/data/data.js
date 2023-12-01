@@ -484,19 +484,24 @@ export {projects};
 
 const JosephPageData ={
     education:[
-        'BSE Computer Science',
-        'Minor in Arts'
+        'BSE Computer Science : University of Iowa',
+        'Minor in Arts : University of Iowa',
+        'High School Diploma : Iowa City West High'
     ],
     experience:[
-        'Work1',
-        'Work2',
-        'Work3'
+        'Student IT Specialist : UIHC : Iowa City, IA',
     ],
     professional:[
         'prof_skill1',
         'prof_skill2',
         'prof_skill3',
         'prof_skill4',
+    ],
+    professional2:[
+        'prof_skill5',
+        'prof_skill6',
+        'prof_skill7',
+        'prof_skill8',
     ],
     personal:[
         'personal_skill1',

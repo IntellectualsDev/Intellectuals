@@ -171,7 +171,7 @@ const Profile = ({JSON}) =>{
                                             ))}
                                         </Col>
                                         <Col className={'half2'}>
-                                            {JSON.professional.map((item,index)=>(
+                                            {JSON.professional2.map((item,index)=>(
                                                 <div key = {index} className={"bulletPoint"}>
                                                     <i className="bi bi-check-circle-fill"></i>
                                                     <p className={'my-p inline'}>{item}</p>
