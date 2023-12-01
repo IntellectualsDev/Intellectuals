@@ -109,21 +109,14 @@ function LoginModule() {
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
-        console.log('Email:', email);
-        console.log('Password:', password);
         tryLogin();
 
     };
 
     return (
-        <div
+        <div className={'main-div'}
             style={{
-                height: '92vh',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                overflowY:"hidden"
+
             }}
         >
             <h1 className={"heading"}>Welcome 👋 </h1>
@@ -135,7 +128,7 @@ function LoginModule() {
                     value={email}
                     onChange={handleEmailChange}
                     style={{
-                        width: `${maxLabelWidth}px`,
+                        width: `30vw`,
                         marginBottom: showErrorEmail ? '5px' : '20px',
                         ...(showErrorEmail && {
                             outline: '2px solid #ff3333',
@@ -151,7 +144,7 @@ function LoginModule() {
                 <Form.Label id="passwordLabel" className="textbox-title">Enter password</Form.Label>
                 <div className="password-container">
                 <InputGroup style={{
-                    width: `${maxLabelWidth}px`,
+                    width: `30vw`,
                     marginBottom: showErrorPassword ? '5px' : '40px',
                     ...(showErrorPassword && {
                         outline: '2px solid #ff3333',
@@ -183,23 +176,13 @@ function LoginModule() {
                     </div>
                 )}
             </Form>
-
             <Button
+                className={'login-button'}
                 variant="outline-success"
                 type="submit"
                 onClick={handleFormSubmit}
-                style={{
-                    width: `${maxLabelWidth}px`,
-                    fontFamily: 'Roboto, sans-serif',
-                    backgroundColor: '#FB2576',
-                    outlineColor: '#FB2576',
-                    color: 'white',
-                    border: "none",
-                    transition: 'all 0.3s ease-in-out',
-
-                }}
             >
-                LOG IN / SIGN UP
+                Login / Sign Up
             </Button>
 
         </div>

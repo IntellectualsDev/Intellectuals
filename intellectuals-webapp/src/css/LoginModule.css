@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 .heading {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     font-size: 60px;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .textbox-title {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
     font-size: 14px;
     text-align: start;
     word-wrap: break-word;
@@ -18,14 +20,32 @@
 
 .body {
     color: #ffffff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+
     font-size: 20px;
     text-align: center;
     word-wrap: break-word;
     margin-bottom: 40px;
 }
+.main-div{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    overflow-y: hidden;
+}
+.login-button{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    width: 30vw;
+    background-color: #FB2576;
+    outline-color: #FB2576;
+    color: white;
+    border: none;
+    transition: all 0.3s ease-in-out;
 
+}
 .error-message{
     color: #ff3333;
     font-family: 'Roboto', sans-serif;
