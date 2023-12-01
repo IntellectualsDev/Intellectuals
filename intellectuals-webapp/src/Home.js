@@ -14,7 +14,7 @@ import NitinsPage from './pages/nitinPage.js';
 import {GlobalNav, HeroSection} from "./homepage";
 import Timeline from "./components/Timeline";
 import {teamMembers} from "./data/data";
-import {AnimatedHero} from "./components/AnimatedHomepageHeroGraphic";
+import {AnimatedHompageHero} from "./components/AnimatedHomepageHero";
 
 function Home() {
     useEffect(() => {
@@ -25,7 +25,7 @@ function Home() {
         <div >
             <GlobalNav />
             {/*<HeroSection />*/}
-            <AnimatedHero />
+            <AnimatedHompageHero />
             <Timeline teamMembers={teamMembers}/>
         </div>
     );
