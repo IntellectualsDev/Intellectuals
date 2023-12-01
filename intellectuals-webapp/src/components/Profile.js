@@ -188,12 +188,24 @@ const Profile = ({JSON}) =>{
                             <div className={'roundedBox'}>
                                 <div className={'textArea'}>
                                     <h1 className={'header'}>Personal</h1>
-                                    {JSON.personal.map((item,index)=>(
-                                        <div key = {index} className={"bulletPoint"}>
-                                            <i className="bi bi-check-circle-fill"></i>
-                                            <p className={'my-p inline'}>{item}</p>
-                                        </div>
-                                    ))}
+                                    <Row>
+                                        <Col className={'half1'}>
+                                            {JSON.personal.map((item,index)=>(
+                                                <div key = {index} className={"bulletPoint"}>
+                                                    <i className="bi bi-check-circle-fill"/>
+                                                    <p className={'my-p inline'}>{item}</p>
+                                                </div>
+                                            ))}
+                                        </Col>
+                                        <Col className={'half2'}>
+                                            {JSON.personal2.map((item,index)=>(
+                                                <div key = {index} className={"bulletPoint"}>
+                                                    <i className="bi bi-check-circle-fill"></i>
+                                                    <p className={'my-p inline'}>{item}</p>
+                                                </div>
+                                            ))}
+                                        </Col>
+                                    </Row>
                                 </div>
                             </div>
                         </Col>
