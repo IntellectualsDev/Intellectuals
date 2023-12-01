@@ -62,52 +62,69 @@ const Profile = ({JSON}) =>{
                 </Row>
             </div>
 
-            <Row className={'topRow'}>
+            <Row className={'topRow'} >
+                <Col xs ={1}>
+
+                </Col>
+                <Col xs = {10} className={'leftProfile'} >
+                    <Row>
+                        <Col xs ={4}>
+                            <img  src = {process.env.PUBLIC_URL + '/display-pic.png'}
+                                  alt = "Profile Image"
+                                  className={'profileImage image'}
+                                  style={{width:"auto", height:"25vw",marginTop:"5%"}}
+                            />
+
+                        </Col>
+                        <Col className={'about-me'}>
+                            <div>
+                                <h1 style={{fontSize:"55px", fontWeight:"700"}}>{JSON.aboutMe}</h1>
+                            </div>
+                        </Col>
+                    </Row>
+
+
+                    {/*<Row className={'personalRow'}>*/}
+                    {/*    <Col xs = {12}>*/}
+
+
+                    {/*    </Col>*/}
+                    {/*    <Col xs = {12}>*/}
+                    {/*        <div className={'buttonDiv'}>*/}
+                    {/*            <Button*/}
+                    {/*                href="https://github.com/pokeham"*/}
+                    {/*                className="icon-button"*/}
+                    {/*                target="_blank"*/}
+                    {/*                rel="noopener noreferrer"*/}
+                    {/*            >*/}
+                    {/*                <FontAwesomeIcon icon={faGithub} style={{fontSize:"50px"}} />*/}
+                    {/*            </Button>*/}
+
+                    {/*            /!* LinkedIn Button *!/*/}
+                    {/*            <Button*/}
+                    {/*                href="https://linkedin.com/in/yourusername"*/}
+                    {/*                className="icon-button"*/}
+                    {/*                target="_blank"*/}
+                    {/*                rel="noopener noreferrer"*/}
+                    {/*            >*/}
+                    {/*                <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize:"50px"}}/>*/}
+                    {/*            </Button>*/}
+                    {/*        </div>*/}
+                    {/*    </Col>*/}
+
+
+                    {/*</Row>*/}
+                </Col>
                 <Col xs = {1}>
 
                 </Col>
-                <Col xs = {4} className={'leftProfile'}>
-                    <Row className={'imageRow'}>
-                        <Col xs ={12} className={"d-flex justify-content-center align-content-center"}>
+                <Col xs = {1}>
 
-
-                        <img  src = {process.env.PUBLIC_URL + '/display-pic.png'}
-                             alt = "Profile Image"
-                             className={'profileImage image'}
-                             style={{width:"auto", height:"60%",marginTop:"5%"}}
-                        />
-                        </Col>
-                    </Row>
-                    <Row className={'personalRow'}>
-                        {/*<div className={'buttonDiv'}>*/}
-                        {/*    <Button*/}
-                        {/*        href="https://github.com/pokeham"*/}
-                        {/*        className="icon-button"*/}
-                        {/*        target="_blank"*/}
-                        {/*        rel="noopener noreferrer"*/}
-                        {/*    >*/}
-                        {/*        <FontAwesomeIcon icon={faGithub} style={{fontSize:"50px"}} />*/}
-                        {/*    </Button>*/}
-
-                        {/*    /!* LinkedIn Button *!/*/}
-                        {/*    <Button*/}
-                        {/*        href="https://linkedin.com/in/yourusername"*/}
-                        {/*        className="icon-button"*/}
-                        {/*        target="_blank"*/}
-                        {/*        rel="noopener noreferrer"*/}
-                        {/*    >*/}
-                        {/*        <FontAwesomeIcon icon={faLinkedinIn} style={{fontSize:"50px"}}/>*/}
-                        {/*    </Button>*/}
-                        {/*</div>*/}
-
-                    </Row>
                 </Col>
+                <Col  xs = {10} className={'rightProfile'}>
+                    <Row className={'trajectory'    }>
+                        <h1 className={'Theader'}>Trajectory</h1>
 
-                <Col className={'rightProfile'}>
-                    <Row className={'trajectory'}>
-                        <Col  xs = {9} className={'trajectoryHeader'}>
-                            <h1 className={'Theader'}>Trajectory</h1>
-                        </Col>
                         <Col  xs = {5} className={'education'}>
                             <div className={'roundedBox'}>
                                 <div className={'textArea'}>

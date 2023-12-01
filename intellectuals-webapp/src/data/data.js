@@ -506,7 +506,8 @@ const JosephPageData ={
 
     ],
     about:"Computer Science Engineer",
-    name:"Joseph"
+    name:"Joseph",
+    aboutMe:"Hi! My name is Joseph and i hate all of you :)"
 }
 export {JosephPageData}
 

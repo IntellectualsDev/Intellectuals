@@ -116,7 +116,17 @@
     /* Adjust color as needed */
     /* Additional styling for the subtitle */
 }
+.about-me{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical centering */
+    align-items: center;
+}
 .topRow{
+
     font-family: "Plus Jakarta Sans", sans-serif;
     height: 100vh;
     background-color: black;
@@ -131,8 +141,8 @@
 }
 .trajectory{
 
-
-    height: 45%;
+    padding-top: 10vh;
+    height: 60%;
     background-color: black;
 }
 .education{
@@ -143,11 +153,14 @@
     background-color: black;
 }
 .skills{
-
-    height: 55%;
+    padding-top: 5vh;
+    height: 65%;
 }
 .technical{
     background-color: black;
+}
+.personal-roq{
+
 }
 .personal {
     background-color: black;
