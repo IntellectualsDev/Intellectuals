@@ -159,39 +159,45 @@ const projects = [
         featured:[
             {
                 id: 1,
-                image: '/slide1.jpg',
-                imageBg: '/slide1b.webp',
-                title: '1983'
+                image: 'wifitherm_smallphoto.png',
+                imageBg: '/wifitherm_largephoto.png',
+                title: 'Wifi-Thermometer',
+                description:" The Intellectuals created a Wifi Thermometer, which includes a RaspberryPi Model 4B and a Node.js Webserver. The Raspberry Pi component utilizes peripherals like a temperature sensor and LCD display, managed by a Python script that handles socket communication and allows remote SSH control. The Node.js WebServer is scalable, featuring asynchronous sockets and a Twilio API for SMS messaging. The frontend offers real-time updates with Chart.js, and a user-friendly interface for phone number input, graph selection, and temperature limit settings.",
             },
             {
                 id: 2,
-                image: '/slide2.jpg',
-                imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                image: 'wifitherm_smallphoto.png',
+                imageBg: '/wifitherm_largephoto.png',
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
-                image: '/slide3.jpg',
-                imageBg: '/slide3b.webp',
+                image: 'wifitherm_smallphoto.png',
+                imageBg: '/wifitherm_largephoto.png',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
-                image: '/slide4.jpg',
-                imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                image: 'wifitherm_smallphoto.png',
+                imageBg: '/wifitherm_largephoto.png',
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
-                image: '/slide5.jpg',
-                imageBg: '/slide5b.webp',
-                title: 'Elite'
+                image: 'wifitherm_smallphoto.png',
+                imageBg: '/wifitherm_largephoto.png',
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
-                image: '/slide6.jpg',
-                imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                image: 'wifitherm_smallphoto.png',
+                imageBg: '/wifitherm_largephoto.png',
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -202,37 +208,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -242,37 +254,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -283,37 +301,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -323,37 +347,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -363,37 +393,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -403,37 +439,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     },
@@ -444,37 +486,43 @@ const projects = [
                 id: 1,
                 image: '/slide1.jpg',
                 imageBg: '/slide1b.webp',
-                title: '1983'
+                title: '1983',
+                description: " ",
             },
             {
                 id: 2,
                 image: '/slide2.jpg',
                 imageBg: '/slide2b.webp',
-                title: 'Russian doll'
+                title: 'Russian doll',
+                description: " ",
             },
             {
                 id: 3,
                 image: '/slide3.jpg',
                 imageBg: '/slide3b.webp',
                 title: 'The rain',
+                description: " ",
             },
             {
                 id: 4,
                 image: '/slide4.jpg',
                 imageBg: '/slide4b.webp',
-                title: 'Sex education'
+                title: 'Sex education',
+                description: " ",
             },
             {
                 id: 5,
                 image: '/slide5.jpg',
                 imageBg: '/slide5b.webp',
-                title: 'Elite'
+                title: 'Elite',
+                description: " ",
             },
             {
                 id: 6,
                 image: '/slide6.jpg',
                 imageBg: '/slide6b.webp',
-                title: 'Black mirror'
+                title: 'Black mirror',
+                description: " ",
             },
         ]
     }

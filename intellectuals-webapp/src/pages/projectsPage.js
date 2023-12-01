@@ -1,11 +1,12 @@
 import React, {Component, useEffect} from 'react';
 import Slider from '../components/Slider/NetflixSlider'
-import '../css/ProjectsPage.scss'
+import '../css/ProjectsPage.css'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {GlobalNav} from "../homepage";
 import {projects} from "../data/data"
+import {AnimatedProjectsHero} from "../components/AnimatedProjectsHero";
 
 const ProjectsHeroSection = () => (
     <div className="projects-hero-section"
@@ -27,45 +28,58 @@ const ProjectsPage = () => {
     return (
         <div className="projects-page">
             <GlobalNav />
-            <ProjectsHeroSection />
-            <Row>
-                    <h4 className={"heading"}>Featured Projects:</h4>
-            </Row>
 
-            <Slider>
-                {projects[0].featured.map((project, index) => (
-                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
-                ))}
-            </Slider>
-            <Row>
-                <h4 className={"heading"}>Electrical Engineering:</h4>
-            </Row>
+            {/*<ProjectsHeroSection />*/}
+                <AnimatedProjectsHero />
 
-            <Slider>
-                {projects[1].electrical.map((project, index) => (
-                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
-                ))}
-            </Slider>
-            <Row>
-                <h4 className={"heading"}>Software Development:</h4>
-            </Row>
+            <Container className='projects-slider-container' fluid>
+                <Row>
+                    <Col xs ={12} className= 'heading-col'>
+                        <h4 className={"heading"}>Featured Projects:</h4>
+                    </Col>
+                    <Col xs ={12} className= 'slider-col'>
+                        <Slider>
+                            {projects[0].featured.map((project, index) => (
+                                <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
+                            ))}
+                        </Slider>
+                    </Col>
 
-            <Slider>
-                {projects[2].software.map((project, index) => (
-                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
-                ))}
-            </Slider>
+                    <Col xs ={12} className= 'heading-col'>
+                        <h4 className={"heading"}>Electrical Engineering:</h4>
+                    </Col>
+                    <Col xs ={12} className= 'slider-col'>
+                        <Slider>
+                            {projects[1].electrical.map((project, index) => (
+                                <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
+                            ))}
+                        </Slider>
+                    </Col>
 
-            <Row>
-                <h4 className={"heading"}>Miscellaneous:</h4>
-            </Row>
-            <Slider>
-                {projects[3].misc.map((project, index) => (
-                    <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
-                ))}
-            </Slider>
+                    <Col xs ={12} className= 'heading-col'>
+                        <h4 className={"heading"}>Software Development:</h4>
+                    </Col>
+                    <Col xs ={12} className= 'slider-col'>
+                        <Slider>
+                            {projects[2].software.map((project, index) => (
+                                <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
+                            ))}
+                        </Slider>
+                    </Col>
 
-            //TODO: migrate to personal pages with proper styling
+                    <Col xs ={12} className= 'heading-col'>
+                        <h4 className={"heading"}>Miscellaneous:</h4>
+                    </Col>
+                    <Col xs ={12} className= 'slider-col'>
+                        <Slider>
+                            {projects[3].misc.map((project, index) => (
+                                <Slider.Item project={project} key={project.id}>item{index+1}</Slider.Item>
+                            ))}
+                        </Slider>
+                    </Col>
+                </Row>
+            </Container>
+            {/*//TODO: migrate to personal pages with proper styling*/}
             {/*<Row>*/}
             {/*    <h4 className={"heading"}>Anshul's Projects:</h4>*/}
             {/*</Row>*/}

@@ -1,0 +1,154 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');*/
+
+.projects-page {
+    scroll-behavior: auto !important;
+    color: #fff;
+}
+
+.projects-hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-hero-section::after {
+    content: '';
+    position: relative;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.project-hero-content {
+    display: grid;
+    position: relative;
+    z-index: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    justify-content: left;
+    /*//align-content: flex-Istart;*/
+}
+
+.projects-hero-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: bolder;
+}
+
+.projects-hero-section .lead {
+    font-size: 1.5rem;
+/*// Smaller font size for the subheadline*/
+    font-weight: 300;
+/*// Lighter font weight for the subheadline*/
+}
+
+/*// Responsive breakpoints if needed*/
+@media (max-width: 768px) {
+    .projects-hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects-hero-section .lead {
+        font-size: 1.2rem;
+    }
+}
+
+#projects-animated-squares{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+    height: 100vh;
+}
+
+.projects-hero-top{
+    width: 100vw;
+    height: 15vh;
+    position: relative;
+    /*z-index: 3;*/
+}
+
+.projects-anim-hero-content{
+    /*top: !important;*/
+    width: 60vw;
+    height: 45vh;
+    position: relative;
+    overflow-wrap: break-word;
+    /*z-index: 3;*/
+    /*background: rgba(0, 0, 0, 0.45);*/
+
+}
+
+.projects-hero-bottom{
+    width: 100vw;
+    height: 40vh;
+    position: relative;
+    text-align: center;
+    padding-top: 9vh;
+
+    /*z-index: 3;*/
+}
+
+.projects-opaque-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    /*background: rgba(0, 0, 0, 0.45);*/
+    /*z-index: 3;*/
+}
+
+.projects-slider-container {
+    position: relative;
+    width: 100vw;
+    z-index: 0 !important;
+    background-color: black !important;
+    margin-top: 100vh;
+    padding-bottom: 10vh;
+    border-top: 10px solid #E63946;
+    padding-top: 10vh;
+}
+
+.projects-anim-hero-content h1{
+    color: white;
+    font-size: 21vh;
+    /*font-family: 'Montserrat', sans-serif;*/
+    text-shadow: 10px 10px 1px rgba(0,0,0,1);
+    max-width: 100%;
+    padding: 0 0 0 19vh;
+
+}
+
+.projects-anim-hero-content h2{
+    color: white;
+    font-size: 4vh;
+    text-shadow: 4px 4px 3px rgba(0,0,0,10);
+    max-width: 100%;
+    padding: 2vh 0 0 20.5vh;
+}
+
+.projects-slider-container .heading-col .heading {
+    /*margin-left: -50vw; !* Adjust the value as needed *!*/
+    text-align: left;
+    font-size: 5vh;
+    padding-left: 8vh;
+}
+
+/*#project-arrow-down-text{*/
+/*    text-align: center !important;*/
+/*}*/
+
+/*#project-arrow-down{*/
+/*    text-align: center !important;*/
+/*    justify-content: end;*/
+/*}*/
