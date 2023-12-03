@@ -1,6 +1,6 @@
 # Intellectuals Engineering React Web App
 
-Welcome to the official repository for the Intellectuals Engineering Organization React Web App. This web application showcases the talents, projects, and timelines of our organization members. Below, you'll find detailed information about the technical aspects of the web app.
+Welcome to the official repository for the Intellectuals Engineering Organization React Web App. This web application showcases the talents, projects, and timelines of our organization members. Below, you'll find detailed information about the technical aspects of the web app. Click this [link](https://intellectuals-webpage.web.app) to visit the currently hosted website!
 
 ## Table of Contents:
 ### Home Page
