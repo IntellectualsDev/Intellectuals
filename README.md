@@ -1,6 +1,8 @@
 # Intellectuals Engineering React Web App
 
-Welcome to the official repository for the Intellectuals Engineering Organization React Web App. This web application showcases the talents, projects, and timelines of our organization members. Below, you'll find detailed information about the technical aspects of the web app. Click this [link](https://intellectuals-webpage.web.app) to visit the currently hosted website!
+Welcome to the official repository for the `Intellectuals Engineering React Web App`. The Intellectauls are a group of college friends at the University of Iowa who have a collective love for all things engineering. Our group consists of Electrical Engineers and Computer Science Engineers, and our skills range from Web/App Development, Embedded Systems, Game Development, Power Systems, Circuit Design, and much more! We are highly motivated students and soon-to-be engineers! Below you'll find detailed information about the technical aspects of our webapp. Click this [link](https://intellectuals-webpage.web.app) to visit the current release of our deployed website!
+
+### Or go visit: [Intellectuals-webpage.web.app](https://intellectuals-webpage.web.app)
 
 ## Table of Contents:
 ### Home Page
