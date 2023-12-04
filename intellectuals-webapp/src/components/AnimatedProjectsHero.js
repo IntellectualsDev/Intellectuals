@@ -5,7 +5,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/AnimatedProjectsHero.css"
+/*
+    •	“Cubed” by Ruben Medellin https://openprocessing.org/sketch/2044889
+        License CreativeCommons Attribution NonCommercial ShareAlike
+        https://creativecommons.org/licenses/by-nc-sa/3.0
 
+        Modifications: sizing of the sketch to fit our component
+
+     */
 const AnimatedProjectsHero = () => {
     function AnimatedProjectsHeroGraphic() {
         const sketch = (p) => {
