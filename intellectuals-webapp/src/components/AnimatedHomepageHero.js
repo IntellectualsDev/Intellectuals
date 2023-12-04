@@ -10,7 +10,12 @@ import Col from "react-bootstrap/Col";
 
 
 // export {AnimatedHomepageHeroGraphic};
+/*•	“231024a” by Okazz http://openprocessing.org/sketch/2058264
+License CreativeCommons Attribution NonCommercial ShareAlike
+https://creativecommons.org/licenses/by-nc-sa/3.0
 
+Modifications: sizing of the sketch to fit our component
+ */
 const AnimatedHompageHero = () => {
     class AnimatedHomepageHeroGraphic extends Component {
         componentDidMount() {
