@@ -20,7 +20,7 @@ Welcome to the official repository for the `Intellectuals Engineering React Web 
 * Form Frontend & Firebase Auth
 
 
-# Hompage
+# Homepage
 <img width="2545" alt="Screenshot 2023-12-03 at 2 50 34 PM" src="https://github.com/anshuljg07/Intellectuals/assets/72891464/d2032f21-acea-47fd-bc15-5c357015c927">
 
 ## Animated Homepage Hero Section:
